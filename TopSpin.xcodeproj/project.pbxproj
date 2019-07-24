@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2FD220E22E8F6CB00D6075D /* TopSpin WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2FD221422E8F6CB00D6075D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221222E8F6CB00D6075D /* Interface.storyboard */; };
+		D2FD221622E8F6CF00D6075D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221522E8F6CF00D6075D /* Assets.xcassets */; };
+		D2FD221D22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2FD222222E8F6CF00D6075D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222122E8F6CF00D6075D /* ContentView.swift */; };
+		D2FD222422E8F6CF00D6075D /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222322E8F6CF00D6075D /* HostingController.swift */; };
+		D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */; };
+		D2FD222822E8F6CF00D6075D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222722E8F6CF00D6075D /* ComplicationController.swift */; };
+		D2FD222A22E8F6D000D6075D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD222922E8F6D000D6075D /* Assets.xcassets */; };
+		D2FD222D22E8F6D000D6075D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD222C22E8F6D000D6075D /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2FD220F22E8F6CB00D6075D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2FD220322E8F6CB00D6075D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2FD220C22E8F6CB00D6075D;
+			remoteInfo = "TopSpin WatchKit App";
+		};
+		D2FD221E22E8F6CF00D6075D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2FD220322E8F6CB00D6075D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2FD221B22E8F6CF00D6075D;
+			remoteInfo = "TopSpin WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2FD223422E8F6D000D6075D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D2FD221D22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2FD223822E8F6D000D6075D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D2FD220E22E8F6CB00D6075D /* TopSpin WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D2FD220922E8F6CB00D6075D /* TopSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TopSpin WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FD221322E8F6CB00D6075D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D2FD221522E8F6CF00D6075D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2FD221722E8F6CF00D6075D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TopSpin WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FD222122E8F6CF00D6075D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2FD222322E8F6CF00D6075D /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D2FD222722E8F6CF00D6075D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D2FD222922E8F6D000D6075D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2FD222C22E8F6D000D6075D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2FD222E22E8F6D000D6075D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2FD221922E8F6CF00D6075D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2FD220222E8F6CB00D6075D = {
+			isa = PBXGroup;
+			children = (
+				D2FD221122E8F6CB00D6075D /* TopSpin WatchKit App */,
+				D2FD222022E8F6CF00D6075D /* TopSpin WatchKit Extension */,
+				D2FD220A22E8F6CB00D6075D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2FD220A22E8F6CB00D6075D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD220922E8F6CB00D6075D /* TopSpin.app */,
+				D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */,
+				D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2FD221122E8F6CB00D6075D /* TopSpin WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD221222E8F6CB00D6075D /* Interface.storyboard */,
+				D2FD221522E8F6CF00D6075D /* Assets.xcassets */,
+				D2FD221722E8F6CF00D6075D /* Info.plist */,
+			);
+			path = "TopSpin WatchKit App";
+			sourceTree = "<group>";
+		};
+		D2FD222022E8F6CF00D6075D /* TopSpin WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD222122E8F6CF00D6075D /* ContentView.swift */,
+				D2FD222322E8F6CF00D6075D /* HostingController.swift */,
+				D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */,
+				D2FD222722E8F6CF00D6075D /* ComplicationController.swift */,
+				D2FD222922E8F6D000D6075D /* Assets.xcassets */,
+				D2FD222E22E8F6D000D6075D /* Info.plist */,
+				D2FD222B22E8F6D000D6075D /* Preview Content */,
+			);
+			path = "TopSpin WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D2FD222B22E8F6D000D6075D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD222C22E8F6D000D6075D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2FD220822E8F6CB00D6075D /* TopSpin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2FD223922E8F6D000D6075D /* Build configuration list for PBXNativeTarget "TopSpin" */;
+			buildPhases = (
+				D2FD220722E8F6CB00D6075D /* Resources */,
+				D2FD223822E8F6D000D6075D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2FD221022E8F6CB00D6075D /* PBXTargetDependency */,
+			);
+			name = TopSpin;
+			productName = TopSpin;
+			productReference = D2FD220922E8F6CB00D6075D /* TopSpin.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D2FD220C22E8F6CB00D6075D /* TopSpin WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2FD223522E8F6D000D6075D /* Build configuration list for PBXNativeTarget "TopSpin WatchKit App" */;
+			buildPhases = (
+				D2FD220B22E8F6CB00D6075D /* Resources */,
+				D2FD223422E8F6D000D6075D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2FD221F22E8F6CF00D6075D /* PBXTargetDependency */,
+			);
+			name = "TopSpin WatchKit App";
+			productName = "TopSpin WatchKit App";
+			productReference = D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D2FD221B22E8F6CF00D6075D /* TopSpin WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2FD223122E8F6D000D6075D /* Build configuration list for PBXNativeTarget "TopSpin WatchKit Extension" */;
+			buildPhases = (
+				D2FD221822E8F6CF00D6075D /* Sources */,
+				D2FD221922E8F6CF00D6075D /* Frameworks */,
+				D2FD221A22E8F6CF00D6075D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TopSpin WatchKit Extension";
+			productName = "TopSpin WatchKit Extension";
+			productReference = D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2FD220322E8F6CB00D6075D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					D2FD220822E8F6CB00D6075D = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					D2FD220C22E8F6CB00D6075D = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					D2FD221B22E8F6CF00D6075D = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = D2FD220622E8F6CB00D6075D /* Build configuration list for PBXProject "TopSpin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2FD220222E8F6CB00D6075D;
+			productRefGroup = D2FD220A22E8F6CB00D6075D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2FD220822E8F6CB00D6075D /* TopSpin */,
+				D2FD220C22E8F6CB00D6075D /* TopSpin WatchKit App */,
+				D2FD221B22E8F6CF00D6075D /* TopSpin WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2FD220722E8F6CB00D6075D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2FD220B22E8F6CB00D6075D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2FD221622E8F6CF00D6075D /* Assets.xcassets in Resources */,
+				D2FD221422E8F6CB00D6075D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2FD221A22E8F6CF00D6075D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2FD222D22E8F6D000D6075D /* Preview Assets.xcassets in Resources */,
+				D2FD222A22E8F6D000D6075D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2FD221822E8F6CF00D6075D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2FD222422E8F6CF00D6075D /* HostingController.swift in Sources */,
+				D2FD222822E8F6CF00D6075D /* ComplicationController.swift in Sources */,
+				D2FD222222E8F6CF00D6075D /* ContentView.swift in Sources */,
+				D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2FD221022E8F6CB00D6075D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2FD220C22E8F6CB00D6075D /* TopSpin WatchKit App */;
+			targetProxy = D2FD220F22E8F6CB00D6075D /* PBXContainerItemProxy */;
+		};
+		D2FD221F22E8F6CF00D6075D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2FD221B22E8F6CF00D6075D /* TopSpin WatchKit Extension */;
+			targetProxy = D2FD221E22E8F6CF00D6075D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2FD221222E8F6CB00D6075D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2FD221322E8F6CB00D6075D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2FD222F22E8F6D000D6075D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2FD223022E8F6D000D6075D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2FD223222E8F6D000D6075D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TopSpin WatchKit Extension\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "TopSpin WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D2FD223322E8F6D000D6075D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TopSpin WatchKit Extension\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "TopSpin WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D2FD223622E8F6D000D6075D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				IBSC_MODULE = TopSpin_WatchKit_Extension;
+				INFOPLIST_FILE = "TopSpin WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D2FD223722E8F6D000D6075D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				IBSC_MODULE = TopSpin_WatchKit_Extension;
+				INFOPLIST_FILE = "TopSpin WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D2FD223A22E8F6D000D6075D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D2FD223B22E8F6D000D6075D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2FD220622E8F6CB00D6075D /* Build configuration list for PBXProject "TopSpin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2FD222F22E8F6D000D6075D /* Debug */,
+				D2FD223022E8F6D000D6075D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2FD223122E8F6D000D6075D /* Build configuration list for PBXNativeTarget "TopSpin WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2FD223222E8F6D000D6075D /* Debug */,
+				D2FD223322E8F6D000D6075D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2FD223522E8F6D000D6075D /* Build configuration list for PBXNativeTarget "TopSpin WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2FD223622E8F6D000D6075D /* Debug */,
+				D2FD223722E8F6D000D6075D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2FD223922E8F6D000D6075D /* Build configuration list for PBXNativeTarget "TopSpin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2FD223A22E8F6D000D6075D /* Debug */,
+				D2FD223B22E8F6D000D6075D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2FD220322E8F6CB00D6075D /* Project object */;
+}
