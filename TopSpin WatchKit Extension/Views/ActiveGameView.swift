@@ -8,48 +8,44 @@
 import SwiftUI
 
 struct ActiveGameView: View {
+    let settings: MatchSetting
     
     @State private var playerOneScore: Int = 0
     @State private var playerTwoScore: Int = 0
     @State private var playerOneServing: Bool = true
     @State private var playerTwoServing: Bool = false
 
+    var onEndGame: (() -> Void)?
+    
     var body: some View {
         ScrollView {
             VStack {
                 HStack {
-                    if playerOneServing {
-                        Circle()
-                        .fill(Color.blue)
-                        .frame(width: 5, height: 5)
-                    }
+                    Circle()
+                    .frame(width: 5, height: 5)
+                    .foregroundColor(playerOneServing ? .green : .clear)
                     
                     Text("\(playerOneScore) - \(playerTwoScore)")
                     .font(Font.system(.largeTitle, design: Font.Design.rounded))
                     
-                    if playerTwoServing {
-                        Circle()
-                        .fill(Color.blue)
-                        .frame(width: 5, height: 5)
-                    }
+                    Circle()
+                    .frame(width: 5, height: 5)
+                    .foregroundColor(playerTwoServing ? .green : .clear)
                 }
                 Button(action: {
                     self.playerOneScore += 1
-                    self.checkServeToggle()
                 }) {
                     Text("Player 1") // Or user name
                     .font(.headline)
                 }
                 Button(action: {
                     self.playerTwoScore += 1
-                    self.checkServeToggle()
                 }) {
                     Text("Player 2")
                     .font(.body)
                 }
                 Button(action: {
-                    self.playerOneScore = 0
-                    self.playerTwoScore = 0
+                    self.onEndGame?()
                 }) {
                     Text("End Game")
                     .font(.body)
@@ -59,27 +55,14 @@ struct ActiveGameView: View {
             }
         }
     }
-    
-    // MARK: - Logic
-    
-    func checkServeToggle() {
-        if self.playerOneScore + self.playerTwoScore % 2 == 0 {
-            self.playerOneServing.toggle()
-            self.playerTwoServing.toggle()
-            print(playerOneServing)
-            print(playerTwoServing)
-        }
-    }
 }
 
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ActiveGameView()
+            ActiveGameView(settings: MatchSetting(limit: 21, winByTwo: true, numberOfPlayers: 2, serveInterval: 5))
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 44mm"))
-            ActiveGameView()
-                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 40mm"))
         }
     }
 }

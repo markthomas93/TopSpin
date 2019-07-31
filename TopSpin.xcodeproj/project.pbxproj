@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D241D0B222EB39FB001C4AC8 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241D0B122EB39FB001C4AC8 /* Match.swift */; };
+		D241D0B422EB3A65001C4AC8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241D0B322EB3A65001C4AC8 /* Player.swift */; };
+		D2DFC31D22F1C57C00FE96AB /* MatchHistoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */; };
+		D2DFC31F22F1C6E000FE96AB /* MatchSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */; };
+		D2DFC32122F1D01000FE96AB /* MatchSetupHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */; };
+		D2DFC32322F1DA1E00FE96AB /* MatchSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32222F1DA1E00FE96AB /* MatchSetting.swift */; };
+		D2DFC32C22F1F63B00FE96AB /* SignUpInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32B22F1F63B00FE96AB /* SignUpInterfaceController.swift */; };
+		D2E1131822F083E500D4D67D /* MatchHistoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */; };
+		D2E1131922F0849900D4D67D /* MatchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E1131622F083C900D4D67D /* MatchHistoryView.swift */; };
 		D2FD220E22E8F6CB00D6075D /* TopSpin WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2FD221422E8F6CB00D6075D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221222E8F6CB00D6075D /* Interface.storyboard */; };
 		D2FD221622E8F6CF00D6075D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221522E8F6CF00D6075D /* Assets.xcassets */; };
 		D2FD221D22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D2FD222222E8F6CF00D6075D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222122E8F6CF00D6075D /* ContentView.swift */; };
-		D2FD222422E8F6CF00D6075D /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222322E8F6CF00D6075D /* HostingController.swift */; };
+		D2FD222222E8F6CF00D6075D /* ActiveGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222122E8F6CF00D6075D /* ActiveGameView.swift */; };
+		D2FD222422E8F6CF00D6075D /* ActiveMatchHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */; };
 		D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */; };
 		D2FD222822E8F6CF00D6075D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222722E8F6CF00D6075D /* ComplicationController.swift */; };
 		D2FD222A22E8F6D000D6075D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD222922E8F6D000D6075D /* Assets.xcassets */; };
@@ -62,14 +71,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D241D0B122EB39FB001C4AC8 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Match.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Model/Match.swift"; sourceTree = "<group>"; };
+		D241D0B322EB3A65001C4AC8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Model/Player.swift"; sourceTree = "<group>"; };
+		D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchHistoryHostingController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/HostingControllers/MatchHistoryHostingController.swift"; sourceTree = "<group>"; };
+		D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetupView.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Views/MatchSetupView.swift"; sourceTree = "<group>"; };
+		D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetupHostingController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/HostingControllers/MatchSetupHostingController.swift"; sourceTree = "<group>"; };
+		D2DFC32222F1DA1E00FE96AB /* MatchSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetting.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Model/MatchSetting.swift"; sourceTree = "<group>"; };
+		D2DFC32B22F1F63B00FE96AB /* SignUpInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpInterfaceController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/InterfaceControllers/SignUpInterfaceController.swift"; sourceTree = "<group>"; };
+		D2DFC32D22F1F6CE00FE96AB /* TopSpin WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TopSpin WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		D2E1131622F083C900D4D67D /* MatchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryView.swift; sourceTree = "<group>"; };
+		D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchHistoryListItem.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Views/MatchHistoryListItem.swift"; sourceTree = "<group>"; };
 		D2FD220922E8F6CB00D6075D /* TopSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TopSpin WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FD221322E8F6CB00D6075D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D2FD221522E8F6CF00D6075D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2FD221722E8F6CF00D6075D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TopSpin WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2FD222122E8F6CF00D6075D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D2FD222322E8F6CF00D6075D /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		D2FD222122E8F6CF00D6075D /* ActiveGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameView.swift; sourceTree = "<group>"; };
+		D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMatchHostingController.swift; sourceTree = "<group>"; };
 		D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D2FD222722E8F6CF00D6075D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		D2FD222922E8F6D000D6075D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +107,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D241D0B022EB39DB001C4AC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D241D0B122EB39FB001C4AC8 /* Match.swift */,
+				D241D0B322EB3A65001C4AC8 /* Player.swift */,
+				D2DFC32222F1DA1E00FE96AB /* MatchSetting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2DFC31B22F1C51700FE96AB /* HostingControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */,
+				D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */,
+				D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */,
+			);
+			path = HostingControllers;
+			sourceTree = "<group>";
+		};
+		D2DFC32622F1F3A200FE96AB /* InterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFC32B22F1F63B00FE96AB /* SignUpInterfaceController.swift */,
+			);
+			path = InterfaceControllers;
+			sourceTree = "<group>";
+		};
+		D2E1131522F083C400D4D67D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD222122E8F6CF00D6075D /* ActiveGameView.swift */,
+				D2E1131622F083C900D4D67D /* MatchHistoryView.swift */,
+				D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */,
+				D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D2FD220222E8F6CB00D6075D = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +178,11 @@
 		D2FD222022E8F6CF00D6075D /* TopSpin WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D2FD222122E8F6CF00D6075D /* ContentView.swift */,
-				D2FD222322E8F6CF00D6075D /* HostingController.swift */,
+				D2DFC32D22F1F6CE00FE96AB /* TopSpin WatchKit Extension.entitlements */,
+				D2DFC32622F1F3A200FE96AB /* InterfaceControllers */,
+				D2DFC31B22F1C51700FE96AB /* HostingControllers */,
+				D2E1131522F083C400D4D67D /* Views */,
+				D241D0B022EB39DB001C4AC8 /* Model */,
 				D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */,
 				D2FD222722E8F6CF00D6075D /* ComplicationController.swift */,
 				D2FD222922E8F6D000D6075D /* Assets.xcassets */,
@@ -266,10 +327,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FD222422E8F6CF00D6075D /* HostingController.swift in Sources */,
+				D2DFC31F22F1C6E000FE96AB /* MatchSetupView.swift in Sources */,
+				D2FD222422E8F6CF00D6075D /* ActiveMatchHostingController.swift in Sources */,
+				D241D0B222EB39FB001C4AC8 /* Match.swift in Sources */,
+				D2E1131922F0849900D4D67D /* MatchHistoryView.swift in Sources */,
+				D2DFC32322F1DA1E00FE96AB /* MatchSetting.swift in Sources */,
 				D2FD222822E8F6CF00D6075D /* ComplicationController.swift in Sources */,
-				D2FD222222E8F6CF00D6075D /* ContentView.swift in Sources */,
+				D2DFC32122F1D01000FE96AB /* MatchSetupHostingController.swift in Sources */,
+				D241D0B422EB3A65001C4AC8 /* Player.swift in Sources */,
+				D2DFC32C22F1F63B00FE96AB /* SignUpInterfaceController.swift in Sources */,
+				D2FD222222E8F6CF00D6075D /* ActiveGameView.swift in Sources */,
 				D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */,
+				D2E1131822F083E500D4D67D /* MatchHistoryListItem.swift in Sources */,
+				D2DFC31D22F1C57C00FE96AB /* MatchHistoryHostingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "TopSpin WatchKit Extension/TopSpin WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TopSpin WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
@@ -426,7 +497,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -440,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "TopSpin WatchKit Extension/TopSpin WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TopSpin WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
@@ -450,7 +522,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -469,7 +541,7 @@
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				IBSC_MODULE = TopSpin_WatchKit_Extension;
 				INFOPLIST_FILE = "TopSpin WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -488,7 +560,7 @@
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				IBSC_MODULE = TopSpin_WatchKit_Extension;
 				INFOPLIST_FILE = "TopSpin WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -501,12 +573,14 @@
 		D2FD223A22E8F6D000D6075D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -514,12 +588,14 @@
 		D2FD223B22E8F6D000D6075D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.dev.TopSpin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
