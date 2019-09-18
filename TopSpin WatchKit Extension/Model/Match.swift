@@ -6,34 +6,36 @@
 //
 
 import SwiftUI
+import RocketWatch
 
 /// A single game that is played. A series of games will be a match.
 /// A game can only have two teams.
 /// A Team can have multiple players or just one. 
-struct Match: Codable, Identifiable {
-    let id: Int
-    let settings: MatchSetting
-    let teamOne: Team
-    let teamTwo: Team
+struct Match: Codable, Identifiable, Equatable, Hashable {
+    let id: String?
     let score: Score
-}
-
-/// A team refers to the player or group of players in a game.
-struct Team: Codable, Equatable {
-    let players: [Player]
+    let date: String
+    let workout: WorkoutSession?
     
-    var teamPlayers: [String] {
-        return players.map { $0.name }
+    private enum CodingKeys : String, CodingKey {
+        case id = "_id"
+        case score, date, workout
+    }
+    
+    init(score: Score, workout: WorkoutSession?) {
+        self.id = nil
+        self.score = score
+        self.date = Date().string(with: .serverDateFormatISO)
+        self.workout = workout
+    }
+    
+    var formattedDate: String? {
+        return Date(iso8601String: date)?.string(with: .shortMonthDay)
     }
 }
 
-struct Score: Codable, Equatable {
-    let teamOneScore: Int
-    let teamTwoScore: Int
-    let teamOne: Team
-    let teamTwo: Team
-    
-    var winner: Team {
-        return teamOneScore > teamTwoScore ? teamOne : teamTwo
-    }
+// Player will always be user
+struct Score: Codable, Equatable, Hashable {
+    let playerScore: Int
+    let opponentScore: Int
 }

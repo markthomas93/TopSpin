@@ -11,6 +11,6 @@ import SwiftUI
 
 class MatchHistoryHostingController: WKHostingController<MatchHistoryView> {
     override var body: MatchHistoryView {
-        return MatchHistoryView(matches: [MatchHistoryView_Previews.mockGame, MatchHistoryView_Previews.mockGame, MatchHistoryView_Previews.mockGame, MatchHistoryView_Previews.mockGame])
+        return MatchHistoryView()
     }
 }

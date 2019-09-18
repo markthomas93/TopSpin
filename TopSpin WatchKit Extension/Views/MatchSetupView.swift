@@ -10,10 +10,11 @@ import SwiftUI
 
 struct MatchSetupView: View {
     
-    @State var scoreLimit: Double = 11
-    @State var winByTwo: Bool = true
-    @State var numberOfPlayers: Int = 2
-    @State var serveInterval: Int = 2
+    @State private var scoreLimit: Double = 11
+    @State private var winByTwo: Bool = true
+    @State private var startWorkout: Bool = true
+    @State private var numberOfPlayers: Int = 2
+    @State private var serveInterval: Int = 2
     
     var onComplete: ((MatchSetting) -> Void)?
     
@@ -23,7 +24,7 @@ struct MatchSetupView: View {
                 Text("Score Limit: \(Int(scoreLimit))")
                 .font(.system(.headline, design: .rounded))
                 
-                Slider(value: $scoreLimit, from: 2, through: 21, by: 1)
+                Slider(value: $scoreLimit, in: ClosedRange(uncheckedBounds: (lower: 0, upper: 21)), step: 1)
                 .accentColor(.green)
                 .digitalCrownRotation($scoreLimit, from: 0, through: 21)
                 
@@ -74,23 +75,41 @@ struct MatchSetupView: View {
                     .accentColor(serveInterval == 5 ? .blue : nil)
                 }
                 
-                Button(action: {
-                    let settings = MatchSetting(limit: Int(self.scoreLimit),
-                                                winByTwo: self.winByTwo,
-                                                numberOfPlayers: self.numberOfPlayers,
-                                                serveInterval: self.serveInterval)
-                    self.onComplete?(settings)
-                }) {
+                Toggle("Workout", isOn: $startWorkout)
+                .padding()
+                
+                Button(action: complete) {
                     HStack {
                         Text("🏓 Start Game")
                         .font(.system(.headline, design: .rounded))
                     }
                 }
                 .accentColor(.green)
+                .padding(.top, 10)
+                
+                Button(action: logout) {
+                    HStack {
+                        Text("Log Out")
+                    }
+                }
                 .padding(.top, 20)
             }
         }
         .navigationBarTitle(Text("Match Setup"))
+    }
+    
+    private func complete() {
+        let settings = MatchSetting(limit: Int(scoreLimit),
+                                    winByTwo: winByTwo,
+                                    numberOfPlayers: numberOfPlayers,
+                                    serveInterval: serveInterval,
+                                    startWorkout: startWorkout)
+        onComplete?(settings)
+    }
+    
+    private func logout() {
+        UserDefaultsManager.clear()
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "LandingView", context: [] as AnyObject)])
     }
 }
 
@@ -100,6 +119,7 @@ struct MatchSetupView_Previews: PreviewProvider {
         Group {
             MatchSetupView()
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 44mm"))
+                .environment(\.locale, .init(identifier: "ar_EG"))
             MatchSetupView()
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 40mm"))
             MatchSetupView()

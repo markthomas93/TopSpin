@@ -7,8 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2088BE223182FA100C99619 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2088BE123182FA100C99619 /* LandingView.swift */; };
+		D2088BE72318365400C99619 /* LandingHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2088BE62318365400C99619 /* LandingHostingController.swift */; };
+		D234EE5A2311F72C00935C66 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D234EE592311F72C00935C66 /* HealthKit.framework */; };
+		D234EE5F2312E3BF00935C66 /* ActiveWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D234EE5E2312E3BF00935C66 /* ActiveWorkoutView.swift */; };
+		D234EE612313158900935C66 /* ActiveWorkoutHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D234EE602313158900935C66 /* ActiveWorkoutHostingController.swift */; };
+		D234EE6323131C9900935C66 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D234EE6223131C9900935C66 /* WorkoutManager.swift */; };
+		D234EE6523131EAE00935C66 /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D234EE6423131EAE00935C66 /* WorkoutSession.swift */; };
+		D23A429D2318B1C1008D1D61 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A429C2318B1C1008D1D61 /* LoadingView.swift */; };
+		D23A429F2318B410008D1D61 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A429E2318B410008D1D61 /* Loader.swift */; };
 		D241D0B222EB39FB001C4AC8 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241D0B122EB39FB001C4AC8 /* Match.swift */; };
 		D241D0B422EB3A65001C4AC8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241D0B322EB3A65001C4AC8 /* Player.swift */; };
+		D262D91B232D793D0092E105 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D262D91A232D793D0092E105 /* SignInWithAppleButton.swift */; };
+		D2856FD7230C9515008D8450 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2856FD6230C9515008D8450 /* Date+Formatter.swift */; };
+		D2856FDE230CDE83008D8450 /* ActiveMatchScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2856FDD230CDE83008D8450 /* ActiveMatchScoreView.swift */; };
+		D2921AAF2315655400985631 /* WorkoutHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2921AAE2315655400985631 /* WorkoutHeartView.swift */; };
+		D2A23BAC230EC56700A5ABC8 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A23BAB230EC56700A5ABC8 /* ScoreboardView.swift */; };
+		D2A4D1EF22FA09780032019D /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A4D1EE22FA09780032019D /* MatchDetailView.swift */; };
+		D2A4D1F922FB03840032019D /* MatchHistoryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A4D1F822FB03840032019D /* MatchHistoryDataManager.swift */; };
+		D2A7DC7B231857A200150A98 /* String+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DC7A231857A200150A98 /* String+Validator.swift */; };
+		D2A7DC7D23185B8900150A98 /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DC7C23185B8900150A98 /* SignUpDataManager.swift */; };
+		D2A7DC8C2318701F00150A98 /* TopSpinApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DC8B2318701F00150A98 /* TopSpinApi.swift */; };
+		D2A7DCF1231872DE00150A98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DCF0231872DE00150A98 /* User.swift */; };
+		D2A7DCF32318746B00150A98 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DCF22318746B00150A98 /* APIConstants.swift */; };
+		D2A7DCF92318767C00150A98 /* BundleUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DCF82318767C00150A98 /* BundleUtil.swift */; };
+		D2A7DCFB231876F100150A98 /* ExtensionDelegate+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7DCFA231876F100150A98 /* ExtensionDelegate+Configuration.swift */; };
+		D2A7DD012318790800150A98 /* RallyWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF3F8B22F5F7C600BBF154 /* RallyWatch.framework */; };
+		D2A7DD022318790800150A98 /* RallyWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2EF3F8B22F5F7C600BBF154 /* RallyWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D2A7DD042318790B00150A98 /* RocketWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A7DCDC231871E700150A98 /* RocketWatch.framework */; };
+		D2A7DD052318790B00150A98 /* RocketWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2A7DCDC231871E700150A98 /* RocketWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D2AD1426232AB03B007B765F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221222E8F6CB00D6075D /* Interface.storyboard */; };
+		D2AD142D232AB25E007B765F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221222E8F6CB00D6075D /* Interface.storyboard */; };
+		D2C2C955231E059100F3CB8E /* Array+Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C2C954231E059100F3CB8E /* Array+Difference.swift */; };
 		D2DFC31D22F1C57C00FE96AB /* MatchHistoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */; };
 		D2DFC31F22F1C6E000FE96AB /* MatchSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */; };
 		D2DFC32122F1D01000FE96AB /* MatchSetupHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */; };
@@ -16,10 +46,11 @@
 		D2DFC32C22F1F63B00FE96AB /* SignUpInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32B22F1F63B00FE96AB /* SignUpInterfaceController.swift */; };
 		D2E1131822F083E500D4D67D /* MatchHistoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */; };
 		D2E1131922F0849900D4D67D /* MatchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E1131622F083C900D4D67D /* MatchHistoryView.swift */; };
-		D2FD220E22E8F6CB00D6075D /* TopSpin WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D2FD221422E8F6CB00D6075D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221222E8F6CB00D6075D /* Interface.storyboard */; };
+		D2EB07E0230C7DA400741A95 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB07DF230C7DA400741A95 /* UserDefaultsManager.swift */; };
+		D2EB07E2230C841400741A95 /* SaveMatchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB07E1230C841400741A95 /* SaveMatchDataManager.swift */; };
+		D2FD220E22E8F6CB00D6075D /* TopSpin.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D2FD220D22E8F6CB00D6075D /* TopSpin.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2FD221622E8F6CF00D6075D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD221522E8F6CF00D6075D /* Assets.xcassets */; };
-		D2FD221D22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2FD221D22E8F6CF00D6075D /* TopSpin Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2FD221C22E8F6CF00D6075D /* TopSpin Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D2FD222222E8F6CF00D6075D /* ActiveGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222122E8F6CF00D6075D /* ActiveGameView.swift */; };
 		D2FD222422E8F6CF00D6075D /* ActiveMatchHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */; };
 		D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */; };
@@ -29,6 +60,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D2A7DCD7231871E700150A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2A7DCD1231871E700150A98 /* RocketNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D23FE98421FCD91800EC0EB5;
+			remoteInfo = RocketNetworking;
+		};
+		D2A7DCD9231871E700150A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2A7DCD1231871E700150A98 /* RocketNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D23FE98D21FCD91800EC0EB5;
+			remoteInfo = RocketNetworkingTests;
+		};
+		D2A7DCDB231871E700150A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2A7DCD1231871E700150A98 /* RocketNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2A7DCC22318714700150A98;
+			remoteInfo = RocketWatch;
+		};
+		D2EF3F8622F5F7C600BBF154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2EF3F8022F5F7C600BBF154 /* Rally.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D23326DF22F3221E006BB18D;
+			remoteInfo = Rally;
+		};
+		D2EF3F8822F5F7C600BBF154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2EF3F8022F5F7C600BBF154 /* Rally.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D23326E822F3221E006BB18D;
+			remoteInfo = RallyTests;
+		};
+		D2EF3F8A22F5F7C600BBF154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2EF3F8022F5F7C600BBF154 /* Rally.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2F3CCDF22F4B4E9009432B8;
+			remoteInfo = RallyWatch;
+		};
 		D2FD220F22E8F6CB00D6075D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2FD220322E8F6CB00D6075D /* Project object */;
@@ -46,13 +119,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D2A7DD032318790800150A98 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D2A7DD052318790B00150A98 /* RocketWatch.framework in Embed Frameworks */,
+				D2A7DD022318790800150A98 /* RallyWatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2FD223422E8F6D000D6075D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D2FD221D22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex in Embed App Extensions */,
+				D2FD221D22E8F6CF00D6075D /* TopSpin Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +148,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				D2FD220E22E8F6CB00D6075D /* TopSpin WatchKit App.app in Embed Watch Content */,
+				D2FD220E22E8F6CB00D6075D /* TopSpin.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,8 +156,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D2088BE123182FA100C99619 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		D2088BE62318365400C99619 /* LandingHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHostingController.swift; sourceTree = "<group>"; };
+		D234EE592311F72C00935C66 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		D234EE5E2312E3BF00935C66 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
+		D234EE602313158900935C66 /* ActiveWorkoutHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutHostingController.swift; sourceTree = "<group>"; };
+		D234EE6223131C9900935C66 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		D234EE6423131EAE00935C66 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
+		D23A429C2318B1C1008D1D61 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D23A429E2318B410008D1D61 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		D241D0B122EB39FB001C4AC8 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Match.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Model/Match.swift"; sourceTree = "<group>"; };
 		D241D0B322EB3A65001C4AC8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Model/Player.swift"; sourceTree = "<group>"; };
+		D257915423317D97001946DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D262D91A232D793D0092E105 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		D2856FD6230C9515008D8450 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		D2856FDD230CDE83008D8450 /* ActiveMatchScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMatchScoreView.swift; sourceTree = "<group>"; };
+		D2921AAE2315655400985631 /* WorkoutHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHeartView.swift; sourceTree = "<group>"; };
+		D2A23BAB230EC56700A5ABC8 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
+		D2A4D1EE22FA09780032019D /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
+		D2A4D1F822FB03840032019D /* MatchHistoryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryDataManager.swift; sourceTree = "<group>"; };
+		D2A7DC7A231857A200150A98 /* String+Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validator.swift"; sourceTree = "<group>"; };
+		D2A7DC7C23185B8900150A98 /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
+		D2A7DC8B2318701F00150A98 /* TopSpinApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSpinApi.swift; sourceTree = "<group>"; };
+		D2A7DCD1231871E700150A98 /* RocketNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RocketNetworking.xcodeproj; path = ../RocketNetworking/RocketNetworking.xcodeproj; sourceTree = "<group>"; };
+		D2A7DCF0231872DE00150A98 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D2A7DCF22318746B00150A98 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D2A7DCF82318767C00150A98 /* BundleUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleUtil.swift; sourceTree = "<group>"; };
+		D2A7DCFA231876F100150A98 /* ExtensionDelegate+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionDelegate+Configuration.swift"; sourceTree = "<group>"; };
+		D2C2C954231E059100F3CB8E /* Array+Difference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Difference.swift"; sourceTree = "<group>"; };
 		D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchHistoryHostingController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/HostingControllers/MatchHistoryHostingController.swift"; sourceTree = "<group>"; };
 		D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetupView.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Views/MatchSetupView.swift"; sourceTree = "<group>"; };
 		D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetupHostingController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/HostingControllers/MatchSetupHostingController.swift"; sourceTree = "<group>"; };
@@ -81,12 +192,15 @@
 		D2DFC32D22F1F6CE00FE96AB /* TopSpin WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TopSpin WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		D2E1131622F083C900D4D67D /* MatchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryView.swift; sourceTree = "<group>"; };
 		D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchHistoryListItem.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Views/MatchHistoryListItem.swift"; sourceTree = "<group>"; };
+		D2EB07DF230C7DA400741A95 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D2EB07E1230C841400741A95 /* SaveMatchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMatchDataManager.swift; sourceTree = "<group>"; };
+		D2EF3F8022F5F7C600BBF154 /* Rally.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rally.xcodeproj; path = ../Rally/Rally.xcodeproj; sourceTree = "<group>"; };
 		D2FD220922E8F6CB00D6075D /* TopSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TopSpin WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FD220D22E8F6CB00D6075D /* TopSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FD221322E8F6CB00D6075D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		D2FD221522E8F6CF00D6075D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2FD221722E8F6CF00D6075D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TopSpin WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FD221C22E8F6CF00D6075D /* TopSpin Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TopSpin Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FD222122E8F6CF00D6075D /* ActiveGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameView.swift; sourceTree = "<group>"; };
 		D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMatchHostingController.swift; sourceTree = "<group>"; };
 		D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +215,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D234EE5A2311F72C00935C66 /* HealthKit.framework in Frameworks */,
+				D2A7DD012318790800150A98 /* RallyWatch.framework in Frameworks */,
+				D2A7DD042318790B00150A98 /* RocketWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,16 +230,42 @@
 				D241D0B122EB39FB001C4AC8 /* Match.swift */,
 				D241D0B322EB3A65001C4AC8 /* Player.swift */,
 				D2DFC32222F1DA1E00FE96AB /* MatchSetting.swift */,
+				D234EE6423131EAE00935C66 /* WorkoutSession.swift */,
+				D2A7DCF0231872DE00150A98 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D2A4D1F422FB035B0032019D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D2A4D1F822FB03840032019D /* MatchHistoryDataManager.swift */,
+				D2EB07E1230C841400741A95 /* SaveMatchDataManager.swift */,
+				D2A7DC7C23185B8900150A98 /* SignUpDataManager.swift */,
+				D2A7DC8B2318701F00150A98 /* TopSpinApi.swift */,
+				D2A7DCF22318746B00150A98 /* APIConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D2A7DCD2231871E700150A98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7DCD8231871E700150A98 /* RocketNetworking.framework */,
+				D2A7DCDA231871E700150A98 /* RocketNetworkingTests.xctest */,
+				D2A7DCDC231871E700150A98 /* RocketWatch.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D2DFC31B22F1C51700FE96AB /* HostingControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */,
 				D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */,
 				D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */,
+				D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */,
+				D234EE602313158900935C66 /* ActiveWorkoutHostingController.swift */,
+				D2088BE62318365400C99619 /* LandingHostingController.swift */,
 			);
 			path = HostingControllers;
 			sourceTree = "<group>";
@@ -142,16 +285,60 @@
 				D2E1131622F083C900D4D67D /* MatchHistoryView.swift */,
 				D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */,
 				D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */,
+				D2A4D1EE22FA09780032019D /* MatchDetailView.swift */,
+				D2856FDD230CDE83008D8450 /* ActiveMatchScoreView.swift */,
+				D2A23BAB230EC56700A5ABC8 /* ScoreboardView.swift */,
+				D234EE5E2312E3BF00935C66 /* ActiveWorkoutView.swift */,
+				D2921AAE2315655400985631 /* WorkoutHeartView.swift */,
+				D2088BE123182FA100C99619 /* LandingView.swift */,
+				D23A429C2318B1C1008D1D61 /* LoadingView.swift */,
+				D23A429E2318B410008D1D61 /* Loader.swift */,
+				D262D91A232D793D0092E105 /* SignInWithAppleButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D2EB07DE230C7D8D00741A95 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB07DF230C7DA400741A95 /* UserDefaultsManager.swift */,
+				D2856FD6230C9515008D8450 /* Date+Formatter.swift */,
+				D234EE6223131C9900935C66 /* WorkoutManager.swift */,
+				D2A7DC7A231857A200150A98 /* String+Validator.swift */,
+				D2A7DCF82318767C00150A98 /* BundleUtil.swift */,
+				D2C2C954231E059100F3CB8E /* Array+Difference.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		D2EF3F8122F5F7C600BBF154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2EF3F8722F5F7C600BBF154 /* Rally.framework */,
+				D2EF3F8922F5F7C600BBF154 /* RallyTests.xctest */,
+				D2EF3F8B22F5F7C600BBF154 /* RallyWatch.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2EF3F8C22F5F7D000BBF154 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D234EE592311F72C00935C66 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D2FD220222E8F6CB00D6075D = {
 			isa = PBXGroup;
 			children = (
+				D257915423317D97001946DA /* Info.plist */,
+				D2A7DCD1231871E700150A98 /* RocketNetworking.xcodeproj */,
+				D2EF3F8022F5F7C600BBF154 /* Rally.xcodeproj */,
 				D2FD221122E8F6CB00D6075D /* TopSpin WatchKit App */,
 				D2FD222022E8F6CF00D6075D /* TopSpin WatchKit Extension */,
 				D2FD220A22E8F6CB00D6075D /* Products */,
+				D2EF3F8C22F5F7D000BBF154 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,8 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				D2FD220922E8F6CB00D6075D /* TopSpin.app */,
-				D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */,
-				D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */,
+				D2FD220D22E8F6CB00D6075D /* TopSpin.app */,
+				D2FD221C22E8F6CF00D6075D /* TopSpin Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,11 +366,14 @@
 			isa = PBXGroup;
 			children = (
 				D2DFC32D22F1F6CE00FE96AB /* TopSpin WatchKit Extension.entitlements */,
+				D2A4D1F422FB035B0032019D /* Networking */,
 				D2DFC32622F1F3A200FE96AB /* InterfaceControllers */,
 				D2DFC31B22F1C51700FE96AB /* HostingControllers */,
 				D2E1131522F083C400D4D67D /* Views */,
+				D2EB07DE230C7D8D00741A95 /* Utility */,
 				D241D0B022EB39DB001C4AC8 /* Model */,
 				D2FD222522E8F6CF00D6075D /* ExtensionDelegate.swift */,
+				D2A7DCFA231876F100150A98 /* ExtensionDelegate+Configuration.swift */,
 				D2FD222722E8F6CF00D6075D /* ComplicationController.swift */,
 				D2FD222922E8F6D000D6075D /* Assets.xcassets */,
 				D2FD222E22E8F6D000D6075D /* Info.plist */,
@@ -234,7 +424,7 @@
 			);
 			name = "TopSpin WatchKit App";
 			productName = "TopSpin WatchKit App";
-			productReference = D2FD220D22E8F6CB00D6075D /* TopSpin WatchKit App.app */;
+			productReference = D2FD220D22E8F6CB00D6075D /* TopSpin.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		D2FD221B22E8F6CF00D6075D /* TopSpin WatchKit Extension */ = {
@@ -244,6 +434,7 @@
 				D2FD221822E8F6CF00D6075D /* Sources */,
 				D2FD221922E8F6CF00D6075D /* Frameworks */,
 				D2FD221A22E8F6CF00D6075D /* Resources */,
+				D2A7DD032318790800150A98 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,7 +442,7 @@
 			);
 			name = "TopSpin WatchKit Extension";
 			productName = "TopSpin WatchKit Extension";
-			productReference = D2FD221C22E8F6CF00D6075D /* TopSpin WatchKit Extension.appex */;
+			productReference = D2FD221C22E8F6CF00D6075D /* TopSpin Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -285,6 +476,16 @@
 			mainGroup = D2FD220222E8F6CB00D6075D;
 			productRefGroup = D2FD220A22E8F6CB00D6075D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D2EF3F8122F5F7C600BBF154 /* Products */;
+					ProjectRef = D2EF3F8022F5F7C600BBF154 /* Rally.xcodeproj */;
+				},
+				{
+					ProductGroup = D2A7DCD2231871E700150A98 /* Products */;
+					ProjectRef = D2A7DCD1231871E700150A98 /* RocketNetworking.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D2FD220822E8F6CB00D6075D /* TopSpin */,
@@ -293,6 +494,51 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D2A7DCD8231871E700150A98 /* RocketNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RocketNetworking.framework;
+			remoteRef = D2A7DCD7231871E700150A98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2A7DCDA231871E700150A98 /* RocketNetworkingTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RocketNetworkingTests.xctest;
+			remoteRef = D2A7DCD9231871E700150A98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2A7DCDC231871E700150A98 /* RocketWatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RocketWatch.framework;
+			remoteRef = D2A7DCDB231871E700150A98 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2EF3F8722F5F7C600BBF154 /* Rally.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rally.framework;
+			remoteRef = D2EF3F8622F5F7C600BBF154 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2EF3F8922F5F7C600BBF154 /* RallyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RallyTests.xctest;
+			remoteRef = D2EF3F8822F5F7C600BBF154 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2EF3F8B22F5F7C600BBF154 /* RallyWatch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RallyWatch.framework;
+			remoteRef = D2EF3F8A22F5F7C600BBF154 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D2FD220722E8F6CB00D6075D /* Resources */ = {
@@ -306,8 +552,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AD142D232AB25E007B765F /* Interface.storyboard in Resources */,
 				D2FD221622E8F6CF00D6075D /* Assets.xcassets in Resources */,
-				D2FD221422E8F6CB00D6075D /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2FD222D22E8F6D000D6075D /* Preview Assets.xcassets in Resources */,
+				D2AD1426232AB03B007B765F /* Interface.storyboard in Resources */,
 				D2FD222A22E8F6D000D6075D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,18 +575,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DFC31F22F1C6E000FE96AB /* MatchSetupView.swift in Sources */,
+				D2A7DCF92318767C00150A98 /* BundleUtil.swift in Sources */,
 				D2FD222422E8F6CF00D6075D /* ActiveMatchHostingController.swift in Sources */,
+				D234EE6323131C9900935C66 /* WorkoutManager.swift in Sources */,
+				D234EE5F2312E3BF00935C66 /* ActiveWorkoutView.swift in Sources */,
+				D2A7DCF1231872DE00150A98 /* User.swift in Sources */,
 				D241D0B222EB39FB001C4AC8 /* Match.swift in Sources */,
+				D2921AAF2315655400985631 /* WorkoutHeartView.swift in Sources */,
+				D2C2C955231E059100F3CB8E /* Array+Difference.swift in Sources */,
 				D2E1131922F0849900D4D67D /* MatchHistoryView.swift in Sources */,
 				D2DFC32322F1DA1E00FE96AB /* MatchSetting.swift in Sources */,
 				D2FD222822E8F6CF00D6075D /* ComplicationController.swift in Sources */,
+				D2A7DC7B231857A200150A98 /* String+Validator.swift in Sources */,
+				D2EB07E0230C7DA400741A95 /* UserDefaultsManager.swift in Sources */,
 				D2DFC32122F1D01000FE96AB /* MatchSetupHostingController.swift in Sources */,
+				D2A7DC8C2318701F00150A98 /* TopSpinApi.swift in Sources */,
+				D2088BE72318365400C99619 /* LandingHostingController.swift in Sources */,
 				D241D0B422EB3A65001C4AC8 /* Player.swift in Sources */,
+				D23A429D2318B1C1008D1D61 /* LoadingView.swift in Sources */,
 				D2DFC32C22F1F63B00FE96AB /* SignUpInterfaceController.swift in Sources */,
 				D2FD222222E8F6CF00D6075D /* ActiveGameView.swift in Sources */,
+				D2088BE223182FA100C99619 /* LandingView.swift in Sources */,
 				D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */,
+				D234EE6523131EAE00935C66 /* WorkoutSession.swift in Sources */,
+				D2A7DCFB231876F100150A98 /* ExtensionDelegate+Configuration.swift in Sources */,
 				D2E1131822F083E500D4D67D /* MatchHistoryListItem.swift in Sources */,
+				D262D91B232D793D0092E105 /* SignInWithAppleButton.swift in Sources */,
+				D2856FDE230CDE83008D8450 /* ActiveMatchScoreView.swift in Sources */,
+				D2A7DCF32318746B00150A98 /* APIConstants.swift in Sources */,
+				D2A23BAC230EC56700A5ABC8 /* ScoreboardView.swift in Sources */,
+				D2A4D1F922FB03840032019D /* MatchHistoryDataManager.swift in Sources */,
 				D2DFC31D22F1C57C00FE96AB /* MatchHistoryHostingController.swift in Sources */,
+				D2A4D1EF22FA09780032019D /* MatchDetailView.swift in Sources */,
+				D2856FD7230C9515008D8450 /* Date+Formatter.swift in Sources */,
+				D2A7DC7D23185B8900150A98 /* SignUpDataManager.swift in Sources */,
+				D23A429F2318B410008D1D61 /* Loader.swift in Sources */,
+				D234EE612313158900935C66 /* ActiveWorkoutHostingController.swift in Sources */,
+				D2EB07E2230C841400741A95 /* SaveMatchDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +678,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -465,6 +738,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -486,8 +760,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				BUILD_ENVIRONMENT = 3;
 				CODE_SIGN_ENTITLEMENTS = "TopSpin WatchKit Extension/TopSpin WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"TopSpin WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				ENABLE_PREVIEWS = YES;
@@ -498,9 +774,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "TopSpin Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -511,8 +788,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				BUILD_ENVIRONMENT = 4;
 				CODE_SIGN_ENTITLEMENTS = "TopSpin WatchKit Extension/TopSpin WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"TopSpin WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				ENABLE_PREVIEWS = YES;
@@ -523,9 +802,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "TopSpin Extension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -538,11 +818,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				IBSC_MODULE = TopSpin_WatchKit_Extension;
 				INFOPLIST_FILE = "TopSpin WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TopSpin;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -557,11 +842,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
 				IBSC_MODULE = TopSpin_WatchKit_Extension;
 				INFOPLIST_FILE = "TopSpin WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TopSpin;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -575,8 +865,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,8 +881,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2J9S2B5EZD;
+				INFOPLIST_FILE = Info.plist;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbrandin.TopSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

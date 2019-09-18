@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-               BuildableName = "TopSpin WatchKit App.app"
+               BuildableName = "TopSpin.app"
                BlueprintName = "TopSpin WatchKit App"
                ReferencedContainer = "container:TopSpin.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-            BuildableName = "TopSpin WatchKit App.app"
+            BuildableName = "TopSpin.app"
             BlueprintName = "TopSpin WatchKit App"
             ReferencedContainer = "container:TopSpin.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-            BuildableName = "TopSpin WatchKit App.app"
+            BuildableName = "TopSpin.app"
             BlueprintName = "TopSpin WatchKit App"
             ReferencedContainer = "container:TopSpin.xcodeproj">
          </BuildableReference>
@@ -91,7 +91,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-            BuildableName = "TopSpin WatchKit App.app"
+            BuildableName = "TopSpin.app"
             BlueprintName = "TopSpin WatchKit App"
             ReferencedContainer = "container:TopSpin.xcodeproj">
          </BuildableReference>

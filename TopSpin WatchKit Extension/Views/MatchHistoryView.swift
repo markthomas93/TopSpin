@@ -8,32 +8,53 @@
 import SwiftUI
 
 struct MatchHistoryView: View {
-    let matches: [Match]
+    
+    @ObservedObject var matchHistoryWebService = MatchHistoryWebService()
     
     var body: some View {
-        List(matches) { match in
-            MatchHistoryListItem(match: match)
+        mainView
+    }
+    
+    private var mainView: some View {
+        VStack {
+            if matchHistoryWebService.matches.isEmpty && matchHistoryWebService.isLoading {
+                Text("Loading Match History")
+                .font(.system(.headline, design: .rounded))
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.center)
+            } else if matchHistoryWebService.matches.isEmpty {
+                Text("No Match History")
+                .font(.system(.headline, design: .rounded))
+                .foregroundColor(.gray)
+            } else if matchHistoryWebService.didFail {
+                Text("Failed 😭")
+                .font(.system(.headline, design: .rounded))
+                .foregroundColor(.gray)
+            } else {
+                List(matchHistoryWebService.matches.sorted(by: { $0.date > $1.date})) { match in //
+                    NavigationLink(destination: MatchDetailView(match: match)) {
+                        MatchHistoryListItem(match: match)
+                    }
+                }
+            }
         }
-        .navigationBarTitle(Text("Match History"))
+        .onAppear(perform: matchHistoryWebService.fetch)
+        .navigationBarTitle("Match History")
     }
 }
 
 #if DEBUG
+
 struct MatchHistoryView_Previews: PreviewProvider {
     
-    static let mockGame = Match(id: 0, settings: MatchSetting(limit: 21,
-                                                    winByTwo: true,
-                                                    numberOfPlayers: 2,
-                                                    serveInterval: 5),
-                                teamOne: Team(players: [Player(name: "Bill")]),
-                                teamTwo: Team(players: [Player(name: "Doug")]),
-                                score: Score(teamOneScore: 11,
-                                             teamTwoScore: 8,
-                                             teamOne: Team(players: [Player(name: "Bill")]),
-                                             teamTwo: Team(players: [Player(name: "Doug")])))
+    static let mockGame = Match(score: Score(playerScore: 11,
+                                             opponentScore: 8),
+                                workout: WorkoutSession(maxHeartRate: 80))
     
     static var previews: some View {
-        MatchHistoryView(matches: [MatchHistoryView_Previews.mockGame, MatchHistoryView_Previews.mockGame, MatchHistoryView_Previews.mockGame, MatchHistoryView_Previews.mockGame])
+        Group {
+            MatchHistoryView()
+        }
     }
 }
 #endif

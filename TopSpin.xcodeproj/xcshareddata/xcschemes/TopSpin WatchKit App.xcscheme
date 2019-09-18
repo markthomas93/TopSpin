@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-               BuildableName = "TopSpin WatchKit App.app"
+               BuildableName = "TopSpin.app"
                BlueprintName = "TopSpin WatchKit App"
                ReferencedContainer = "container:TopSpin.xcodeproj">
             </BuildableReference>
@@ -61,11 +61,23 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-            BuildableName = "TopSpin WatchKit App.app"
+            BuildableName = "TopSpin.app"
             BlueprintName = "TopSpin WatchKit App"
             ReferencedContainer = "container:TopSpin.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
+      <AdditionalOptions>
+         <AdditionalOption
+            key = "MallocStackLogging"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "PrefersMallocStackLoggingLite"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -80,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-            BuildableName = "TopSpin WatchKit App.app"
+            BuildableName = "TopSpin.app"
             BlueprintName = "TopSpin WatchKit App"
             ReferencedContainer = "container:TopSpin.xcodeproj">
          </BuildableReference>
@@ -89,7 +101,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2FD220C22E8F6CB00D6075D"
-            BuildableName = "TopSpin WatchKit App.app"
+            BuildableName = "TopSpin.app"
             BlueprintName = "TopSpin WatchKit App"
             ReferencedContainer = "container:TopSpin.xcodeproj">
          </BuildableReference>

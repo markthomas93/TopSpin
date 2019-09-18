@@ -10,16 +10,22 @@ import Foundation
 import SwiftUI
 
 class MatchSetupHostingController: WKHostingController<MatchSetupView> {
+        
     override var body: MatchSetupView {
         var setupView = MatchSetupView()
         
-        setupView.onComplete = { settings in
+        setupView.onComplete = { [weak self] settings in
+            
             DispatchQueue.main.async {
-                WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "ActiveMatch", context: settings as AnyObject),
-                                                                                   (name: "MatchHistory", context: [] as AnyObject)])
+                self?.showActiveView(with: settings, workoutManager: WorkoutManager())
             }
         }
         
         return setupView
+    }
+    
+    private func showActiveView(with settings: MatchSetting, workoutManager: WorkoutManager) {
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "ActiveMatch",
+                                                                            context: (settings, workoutManager) as AnyObject)])
     }
 }

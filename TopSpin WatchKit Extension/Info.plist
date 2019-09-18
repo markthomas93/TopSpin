@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BUILD_ENVIRONMENT</key>
+	<string>$(BUILD_ENVIRONMENT)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>TopSpin WatchKit Extension</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,23 +21,16 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>CLKComplicationPrincipalClass</key>
 	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
 	<key>CLKComplicationSupportedFamilies</key>
-	<array>
-		<string>CLKComplicationFamilyModularSmall</string>
-		<string>CLKComplicationFamilyModularLarge</string>
-		<string>CLKComplicationFamilyUtilitarianSmall</string>
-		<string>CLKComplicationFamilyUtilitarianSmallFlat</string>
-		<string>CLKComplicationFamilyUtilitarianLarge</string>
-		<string>CLKComplicationFamilyCircularSmall</string>
-		<string>CLKComplicationFamilyExtraLarge</string>
-		<string>CLKComplicationFamilyGraphicCorner</string>
-		<string>CLKComplicationFamilyGraphicBezel</string>
-		<string>CLKComplicationFamilyGraphicCircular</string>
-		<string>CLKComplicationFamilyGraphicRectangular</string>
-	</array>
+	<array/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
@@ -46,6 +41,10 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We track workout data and we will save it to your Activity so it will count towards your rings!</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We use your health data to track workouts during matches that you play.</string>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKWatchOnly</key>

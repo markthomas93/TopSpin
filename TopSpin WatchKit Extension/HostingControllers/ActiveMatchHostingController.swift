@@ -6,32 +6,39 @@
 //
 
 import WatchKit
-import Foundation
 import SwiftUI
 
 class ActiveMatchHostingController: WKHostingController<ActiveGameView> {
     
-    private var settings: MatchSetting!
+    // MARK: - Properties
+    
+    private var workoutManager: WorkoutManager!
+    private var matchSettings: MatchSetting!
+    
+    // MARK: - Body
     
     override var body: ActiveGameView {
-        var active = ActiveGameView(settings: settings)
-        
-        active.onEndGame = {
+        let active = ActiveGameView(settings: matchSettings, workoutManager: workoutManager) {
+            
             DispatchQueue.main.async {
-                WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "MatchSetup", context: [] as AnyObject)])
+                WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "MatchSetup", context: [] as AnyObject),
+                                                                                   (name: "MatchHistory", context: [] as AnyObject)])
             }
         }
         
         return active
     }
     
+    // MARK: - Awake
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        guard let settings = context as? MatchSetting else {
+        guard let context = context as? (settings: MatchSetting, workoutManager: WorkoutManager?) else {
             return
         }
         
-        self.settings = settings
+        workoutManager = context.workoutManager
+        matchSettings = context.settings
     }
 }

@@ -6,54 +6,111 @@
 //
 
 import SwiftUI
+import Combine
+import RallyWatch
 
 struct ActiveGameView: View {
-    let settings: MatchSetting
+        
+    // MARK: - Bindings
     
-    @State private var playerOneScore: Int = 0
-    @State private var playerTwoScore: Int = 0
-    @State private var playerOneServing: Bool = true
-    @State private var playerTwoServing: Bool = false
+    @ObservedObject var workoutManager: WorkoutManager
+    @ObservedObject private var controller: RallyMatchController
+    @State private var didTapEndGame: Bool = false
 
-    var onEndGame: (() -> Void)?
+    // MARK: - Properties
+    
+    private var dataManager = SaveMatchDataManager()
+    private var onEndGame: (() -> Void)?
+    private var startWorkout: Bool
     
     var body: some View {
+        activeGameView()
+    }
+    
+    // MARK: - Initializer
+    
+    init(settings: MatchSetting, workoutManager: WorkoutManager, onEndGame: (() -> Void)?) {
+        self.controller = RallyMatchController(settings: settings)
+        self.workoutManager = workoutManager
+        self.onEndGame = onEndGame
+        self.startWorkout = settings.startWorkout
+        
+        if settings.startWorkout {
+            workoutManager.startWorkoutSession()
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func activeGameView() -> some View {
         ScrollView {
-            VStack {
-                HStack {
-                    Circle()
-                    .frame(width: 5, height: 5)
-                    .foregroundColor(playerOneServing ? .green : .clear)
-                    
-                    Text("\(playerOneScore) - \(playerTwoScore)")
-                    .font(Font.system(.largeTitle, design: Font.Design.rounded))
-                    
-                    Circle()
-                    .frame(width: 5, height: 5)
-                    .foregroundColor(playerTwoServing ? .green : .clear)
+            VStack(spacing: 5) {
+                ActiveMatchScoreView(servingTeam: $controller.servingTeam,
+                                     teamOneScore: $controller.teamOneScore,
+                                     teamTwoScore: $controller.teamTwoScore,
+                                     teamHasGamePoint: $controller.teamHasGamePoint)
+                
+                if startWorkout {
+                    WorkoutHeartView(heartRate: $workoutManager.latestHeartRate)
+                }
+                
+                VStack(spacing: 10) {
+                    Button(action: {
+                        self.controller.teamOneScore += 1
+                    }) {
+                        Text("Player 1") // Or user name
+                        .font(.headline)
+                    }
+                    Button(action: {
+                        self.controller.teamTwoScore += 1
+                    }) {
+                        Text("Player 2")
+                        .font(.body)
+                    }
                 }
                 Button(action: {
-                    self.playerOneScore += 1
-                }) {
-                    Text("Player 1") // Or user name
-                    .font(.headline)
-                }
-                Button(action: {
-                    self.playerTwoScore += 1
-                }) {
-                    Text("Player 2")
-                    .font(.body)
-                }
-                Button(action: {
-                    self.onEndGame?()
+                    self.didTapEndGame.toggle()
                 }) {
                     Text("End Game")
                     .font(.body)
                 }
                 .accentColor(.red)
                 .padding(.top, 20)
+                .alert(isPresented: $didTapEndGame) {
+                    Alert(title: Text("Are you sure you want to cancel this game?"),
+                          primaryButton: .destructive(Text("Yes"), action: self.endMatch),
+                          secondaryButton: .cancel(Text("No")))
+                }
             }
         }
+        .alert(isPresented: $controller.teamDidWin) {            
+            let winningTeam = controller.winningTeam
+            let messageText = winningTeam == .one ? "Play again?" : "Go again?"
+            
+            return Alert(title: Text(winningTeam == .one ? "Winner!" : "Oh no!"),
+                         message: Text(messageText),
+                         primaryButton: .cancel(Text("Oh yea!"), action: {
+                            self.saveMatch()
+                            self.controller.setNewGame()
+                         }),
+                         secondaryButton: .default(Text("Not this time"), action: {
+                            self.saveMatch()
+                            self.endMatch()
+                         }))
+        }
+    }
+    
+    private func saveMatch() {
+        let match = Match(score: Score(playerScore: controller.teamOneScore,
+                                       opponentScore: controller.teamTwoScore),
+                          workout: workoutManager.getCurrentWorkoutSession())
+        
+        dataManager.save(match)
+    }
+    
+    private func endMatch() {
+        workoutManager.completeWorkout()
+        onEndGame?()
     }
 }
 
@@ -61,8 +118,12 @@ struct ActiveGameView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ActiveGameView(settings: MatchSetting(limit: 21, winByTwo: true, numberOfPlayers: 2, serveInterval: 5))
-                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 44mm"))
+            ActiveGameView(settings: MatchSetting(limit: 11, winByTwo: true, numberOfPlayers: 2, serveInterval: 2, startWorkout: false),
+                           workoutManager: WorkoutManager(),
+                           onEndGame: {
+                print("End")
+            })
+            .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 38mm"))
         }
     }
 }

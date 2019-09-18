@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import RallyWatch
 
-struct MatchSetting: Codable, Equatable {
+struct MatchSetting: Codable, Equatable, RallyMatchConfigurable {
     let limit: Int
     let winByTwo: Bool
     let numberOfPlayers: Int
     let serveInterval: Int
+    let startWorkout: Bool
 }
