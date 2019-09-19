@@ -18,16 +18,16 @@ struct MatchHistoryView: View {
     private var mainView: some View {
         VStack {
             if matchHistoryWebService.matches.isEmpty && matchHistoryWebService.isLoading {
-                Text("Loading Match History")
+                Text(Constants.Strings.MatchHistory.loadingMatchHistory)
                 .font(.system(.headline, design: .rounded))
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
             } else if matchHistoryWebService.matches.isEmpty {
-                Text("No Match History")
+                Text(Constants.Strings.MatchHistory.noMatchHistory)
                 .font(.system(.headline, design: .rounded))
                 .foregroundColor(.gray)
             } else if matchHistoryWebService.didFail {
-                Text("Failed 😭")
+                Text(Constants.Strings.MatchHistory.failed)
                 .font(.system(.headline, design: .rounded))
                 .foregroundColor(.gray)
             } else {
@@ -39,7 +39,7 @@ struct MatchHistoryView: View {
             }
         }
         .onAppear(perform: matchHistoryWebService.fetch)
-        .navigationBarTitle("Match History")
+        .navigationBarTitle(Constants.Strings.MatchHistory.matchHistoryTitle)
     }
 }
 

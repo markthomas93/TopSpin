@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  TopSpin
+
+  Created by Will Brandin on 9/19/19.
+  
+*/
+
+// MARK: - Active Match
+
+"player.one" = "玩家一";
+"player.two" = "玩家二";
+"end.game" = "结束游戏";
+"cancel.match.warning" = "您确定要取消此游戏吗?";
+"yes" = "是";
+"no" = "没有";
+"play.again" = "再玩一遍";
+"go.again" = "再去一次";
+"winner" = "优胜者";
+"oh.no" = "不好了";
+"oh.yea" = "哦，是的";
+"no.this.time" = "这次不行";
+"match.point" = "匹配点";
+
+
+// MARK: - Match History
+
+"match.history.loading" = "载入中";
+"no.match.history" = "没有比赛记录";
+"match.history.failed" = "不遂 😭";
+"match.history.title" = "比赛历史";
+
+// MARK: - Match History Item
+
+"win" = "赢得";
+"lose" = "失去";
+
+// MARK: - Match Setup
+
+"score.limit" = "分数限制:";
+"win.by.two" = "赢二";
+"number.of.players" = "玩家人数";
+"2" = "2";
+"4" = "4";
+"serve.interval" = "服务间隔";
+"5" = "5";
+"workout" = "锻炼";
+"start.game" = "🏓 开始比赛";
+"log.out" = "登出";
+"match.setup.title" = "比赛设定";
+
+// MARK: - Match History Detail
+
+"opponent" = "对手";
+"final.score" = "最终分数:";
+"winnter" = "优胜者:";
+"max.heart.rate" = "最大心率";
+"match.history.detail.title" = "比赛细节";
+
+// MARK: - Landing
+
+"uh.oh.emoji.sweatdrop" = "不好了! 😅";
+"okay" = "好的";

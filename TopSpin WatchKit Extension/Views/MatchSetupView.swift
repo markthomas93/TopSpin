@@ -21,17 +21,17 @@ struct MatchSetupView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("Score Limit: \(Int(scoreLimit))")
+                Text("\(Constants.Strings.MatchSetup.scoreLimit) \(Int(scoreLimit))")
                 .font(.system(.headline, design: .rounded))
                 
                 Slider(value: $scoreLimit, in: ClosedRange(uncheckedBounds: (lower: 0, upper: 21)), step: 1)
                 .accentColor(.green)
                 .digitalCrownRotation($scoreLimit, from: 0, through: 21)
                 
-                Toggle("Win by Two", isOn: $winByTwo)
+                Toggle(Constants.Strings.MatchSetup.winByTwo, isOn: $winByTwo)
                 .padding()
                 
-                Text("Number of Players")
+                Text(Constants.Strings.MatchSetup.numberOfPlayers)
                 .font(.system(.headline, design: .rounded))
                 .padding(.top)
                 
@@ -39,7 +39,7 @@ struct MatchSetupView: View {
                     Button(action: {
                         self.numberOfPlayers = 2
                     }) {
-                        Text("2")
+                        Text(Constants.Strings.MatchSetup.numberTwo)
                     }
                     .accentColor(numberOfPlayers == 2 ? .blue : nil)
                     .font(.system(.body, design: .rounded))
@@ -47,13 +47,13 @@ struct MatchSetupView: View {
                     Button(action: {
                         self.numberOfPlayers = 4
                     }) {
-                        Text("4")
+                        Text(Constants.Strings.MatchSetup.numberFour)
                     }
                     .accentColor(numberOfPlayers == 4 ? .blue : nil)
                     .font(.system(.body, design: .rounded))
                 }
                 
-                Text("Serve Interval")
+                Text(Constants.Strings.MatchSetup.serveInterval)
                 .font(.system(.headline, design: .rounded))
                 .padding(.top)
                 
@@ -61,7 +61,7 @@ struct MatchSetupView: View {
                     Button(action: {
                         self.serveInterval = 2
                     }) {
-                        Text("2")
+                        Text(Constants.Strings.MatchSetup.numberTwo)
                     }
                     .accentColor(serveInterval == 2 ? .blue : nil)
                     .font(.system(.body, design: .rounded))
@@ -69,18 +69,18 @@ struct MatchSetupView: View {
                     Button(action: {
                         self.serveInterval = 5
                     }) {
-                        Text("5")
+                        Text(Constants.Strings.MatchSetup.numberFive)
                     }
                     .font(.system(.body, design: .rounded))
                     .accentColor(serveInterval == 5 ? .blue : nil)
                 }
                 
-                Toggle("Workout", isOn: $startWorkout)
+                Toggle(Constants.Strings.MatchSetup.workout, isOn: $startWorkout)
                 .padding()
                 
                 Button(action: complete) {
                     HStack {
-                        Text("🏓 Start Game")
+                        Text(Constants.Strings.MatchSetup.startGame)
                         .font(.system(.headline, design: .rounded))
                     }
                 }
@@ -89,13 +89,13 @@ struct MatchSetupView: View {
                 
                 Button(action: logout) {
                     HStack {
-                        Text("Log Out")
+                        Text(Constants.Strings.MatchSetup.logOut)
                     }
                 }
                 .padding(.top, 20)
             }
         }
-        .navigationBarTitle(Text("Match Setup"))
+        .navigationBarTitle(Text(Constants.Strings.MatchSetup.matchSetupTitle))
     }
     
     private func complete() {
@@ -119,11 +119,11 @@ struct MatchSetupView_Previews: PreviewProvider {
         Group {
             MatchSetupView()
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 44mm"))
-                .environment(\.locale, .init(identifier: "ar_EG"))
+                .environment(\.locale, Locale(identifier: "zh-Hans"))
+
             MatchSetupView()
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 40mm"))
-            MatchSetupView()
-                .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 38mm"))
+                .environment(\.locale, Locale(identifier: "zh-Hans"))
         }
     }
 }

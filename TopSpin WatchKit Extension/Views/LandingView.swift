@@ -15,9 +15,9 @@ struct LandingView: View {
         LoadingView(isShowing: $dataManager.loading) {
             self.mainView
         }.alert(isPresented: $dataManager.didError) {
-            Alert(title: Text("Uh oh! 😅"),
+            Alert(title: Text(Constants.Strings.General.uhOhEmoji),
                   message: Text(dataManager.errorMessage ?? ""),
-                  dismissButton: .cancel(Text("Okay")))
+                  dismissButton: .cancel(Text(Constants.Strings.General.okay)))
         }
     }
     

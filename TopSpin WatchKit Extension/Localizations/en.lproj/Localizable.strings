@@ -1,0 +1,62 @@
+/* 
+  Localizable.strings
+  TopSpin
+
+  Created by Will Brandin on 9/19/19.
+  
+*/
+
+// MARK: - Active Match
+
+"player.one" = "Player One";
+"player.two" = "Player Two";
+"end.game" = "End Game";
+"cancel.match.warning" = "Are you sure you want to cancel this game?";
+"yes" = "Yes";
+"no" = "No";
+"play.again" = "Play Again";
+"go.again" = "Go Again";
+"winner" = "Winner!";
+"oh.no" = "Oh no!";
+"oh.yea" = "Oh yea!";
+"no.this.time" = "Not this time";
+"match.point" = "Match Point";
+
+// MARK: - Match History
+
+"match.history.loading" = "Loading Match History";
+"no.match.history" = "No Match History";
+"match.history.failed" = "Failed 😭";
+"match.history.title" = "Match History";
+
+// MARK: - Match History Item
+
+"win" = "Win";
+"lose" = "Lose";
+
+// MARK: - Match Setup
+
+"score.limit" = "Score Limit:";
+"win.by.two" = "Win by Two";
+"number.of.players" = "Number of Players";
+"2" = "2";
+"4" = "4";
+"serve.interval" = "Serve Interval";
+"5" = "5";
+"workout" = "Workout";
+"start.game" = "🏓 Start Game";
+"log.out" = "Log Out";
+"match.setup.title" = "Match Setup";
+
+// MARK: - Match History Detail
+
+"opponent" = "Opponent";
+"final.score" = "Final Score:";
+"winnter" = "Winner:";
+"max.heart.rate" = "Max Heart Rate";
+"match.history.detail.title" = "Match Detail";
+
+// MARK: - Landing
+
+"uh.oh.emoji.sweatdrop" = "Uh oh! 😅";
+"okay" = "Okay";

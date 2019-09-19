@@ -58,42 +58,42 @@ struct ActiveGameView: View {
                     Button(action: {
                         self.controller.teamOneScore += 1
                     }) {
-                        Text("Player 1") // Or user name
+                        Text(Constants.Strings.General.playerOne) // Or user name
                         .font(.headline)
                     }
                     Button(action: {
                         self.controller.teamTwoScore += 1
                     }) {
-                        Text("Player 2")
+                        Text(Constants.Strings.General.playerTwo)
                         .font(.body)
                     }
                 }
                 Button(action: {
                     self.didTapEndGame.toggle()
                 }) {
-                    Text("End Game")
+                    Text(Constants.Strings.ActiveMatch.endGame)
                     .font(.body)
                 }
                 .accentColor(.red)
                 .padding(.top, 20)
                 .alert(isPresented: $didTapEndGame) {
-                    Alert(title: Text("Are you sure you want to cancel this game?"),
-                          primaryButton: .destructive(Text("Yes"), action: self.endMatch),
-                          secondaryButton: .cancel(Text("No")))
+                    Alert(title: Text(Constants.Strings.ActiveMatch.cancelMatchWarning),
+                          primaryButton: .destructive(Text(Constants.Strings.General.yes), action: self.endMatch),
+                          secondaryButton: .cancel(Text(Constants.Strings.General.no)))
                 }
             }
         }
         .alert(isPresented: $controller.teamDidWin) {            
             let winningTeam = controller.winningTeam
-            let messageText = winningTeam == .one ? "Play again?" : "Go again?"
+            let messageText = winningTeam == .one ? Constants.Strings.ActiveMatch.playAgain : Constants.Strings.ActiveMatch.goAgain
             
-            return Alert(title: Text(winningTeam == .one ? "Winner!" : "Oh no!"),
+            return Alert(title: Text(winningTeam == .one ? Constants.Strings.ActiveMatch.winner : Constants.Strings.ActiveMatch.ohNo),
                          message: Text(messageText),
-                         primaryButton: .cancel(Text("Oh yea!"), action: {
+                         primaryButton: .cancel(Text(Constants.Strings.ActiveMatch.onYea), action: {
                             self.saveMatch()
                             self.controller.setNewGame()
                          }),
-                         secondaryButton: .default(Text("Not this time"), action: {
+                         secondaryButton: .default(Text(Constants.Strings.ActiveMatch.notThisTime), action: {
                             self.saveMatch()
                             self.endMatch()
                          }))

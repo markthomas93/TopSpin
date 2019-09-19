@@ -15,7 +15,7 @@ struct MatchHistoryListItem: View {
     }
     
     var gameResult: String {
-        teamOneWinner ? "Win" : "Lose"
+        teamOneWinner ? Constants.Strings.General.win : Constants.Strings.General.lose
     }
     
     var body: some View {

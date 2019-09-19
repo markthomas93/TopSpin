@@ -1,0 +1,15 @@
+
+/* Class = "WKInterfaceController"; title = "Sign Up"; ObjectID = "Dlz-tJ-zRL"; */
+"Dlz-tJ-zRL.title" = "Sign Up";
+
+/* Class = "WKInterfaceLabel"; text = "🏓"; ObjectID = "Lvc-Px-B8M"; */
+"Lvc-Px-B8M.text" = "🏓";
+
+/* Class = "WKHostingController"; title = "Match Setup"; ObjectID = "P6r-c4-HAc"; */
+"P6r-c4-HAc.title" = "Match Setup";
+
+/* Class = "WKHostingController"; title = "Match History"; ObjectID = "sPM-Ac-h27"; */
+"sPM-Ac-h27.title" = "Match History";
+
+/* Class = "WKInterfaceLabel"; text = "Top Spin"; ObjectID = "xPk-no-8rG"; */
+"xPk-no-8rG.text" = "Top Spin";

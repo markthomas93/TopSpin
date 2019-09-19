@@ -39,7 +39,7 @@ struct ActiveMatchScoreView: View {
 
 struct MatchPointView: View {
     var body: some View {
-        Text("Match Point".uppercased())
+        Text(Constants.Strings.ActiveMatch.matchPoint.uppercased())
         .fontWeight(.bold)
         .font(.footnote)
         .padding(.vertical, 2)

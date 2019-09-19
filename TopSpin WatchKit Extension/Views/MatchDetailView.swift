@@ -16,17 +16,17 @@ struct MatchDetailView: View {
     }
     
     private var winningTeamName: String {
-        return userDidWin ? "Player One" : "Opponent"
+        return userDidWin ? Constants.Strings.General.playerOne : Constants.Strings.General.opponent
     }
     
     var body: some View {
         ScrollView {
             VStack {
-                Text("Final Score:")
+                Text(Constants.Strings.MatchHistoryDetail.finalScore)
                     .font(.headline)
                 ScoreboardView(playerScore: .constant(match.score.playerScore), opponentScore: .constant(match.score.opponentScore))
                 
-                Text("Winner:")
+                Text(Constants.Strings.MatchHistoryDetail.winner)
                     .font(.subheadline)
                 
                 Text(winningTeamName)
@@ -36,13 +36,13 @@ struct MatchDetailView: View {
                 
                 if match.workout?.maxHeartRate != nil && match.workout?.maxHeartRate != 0 {
                     VStack(spacing: 4) {
-                        Text("Max Heart Rate:")
+                        Text(Constants.Strings.MatchHistoryDetail.maxHeartRate)
                         WorkoutHeartView(heartRate: .constant(match.workout!.maxHeartRate))
                     }.padding(.top, 4)
                 }
             }
         }
-        .navigationBarTitle(match.formattedDate ?? "Match Detail")
+        .navigationBarTitle(match.formattedDate ?? Constants.Strings.MatchHistoryDetail.matchDetailTitle)
     }
 }
 
