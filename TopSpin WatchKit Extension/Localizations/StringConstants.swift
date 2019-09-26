@@ -133,8 +133,8 @@ extension Constants {
                 return NSLocalizedString(LocalizationKeys.MatchSetup.workout, comment: "")
             }
             
-            static var startGame: String {
-                return NSLocalizedString(LocalizationKeys.MatchSetup.startGame, comment: "")
+            static var save: String {
+                return NSLocalizedString(LocalizationKeys.MatchSetup.save, comment: "")
             }
             
             static var logOut: String {

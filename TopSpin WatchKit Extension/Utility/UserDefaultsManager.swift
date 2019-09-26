@@ -11,6 +11,7 @@ class UserDefaultsManager {
      
     private static let userTokenKey = "userTokenKey"
     private static let gameHistoryKey = "gameHistoryKey"
+    private static let matchSettingsKey = "matchSettingsKey"
     private static let loggedInUserKey = "loggedInUserKey"
     
     static var userToken: String? {
@@ -38,6 +39,26 @@ class UserDefaultsManager {
             if let encoded = try? encoder.encode(newValue) {
                 let defaults = UserDefaults.standard
                 defaults.set(encoded, forKey: loggedInUserKey)
+            }
+        }
+    }
+    
+    static var matchSettings: MatchSetting? {
+        get {
+            let decoder = JSONDecoder()
+
+            if let settingsData = UserDefaults.standard.object(forKey: matchSettingsKey) as? Data,
+                let settings = try? decoder.decode(MatchSetting.self, from: settingsData) {
+                    return settings
+            } else {
+                return nil
+            }
+        }
+        set {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(newValue) {
+                let defaults = UserDefaults.standard
+                defaults.set(encoded, forKey: matchSettingsKey)
             }
         }
     }

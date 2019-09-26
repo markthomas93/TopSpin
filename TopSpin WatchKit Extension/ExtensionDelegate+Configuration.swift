@@ -16,7 +16,6 @@ extension ExtensionDelegate {
             return
         }
         
-        NetworkManager.setEnvironment(for: environment)
+        NetworkManager.setEnvironment(for: .local)
     }
-
 }

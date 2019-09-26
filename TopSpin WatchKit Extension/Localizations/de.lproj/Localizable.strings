@@ -36,15 +36,15 @@
 
 // MARK: - Match Setup
 
-"score.limit" = "Punktegrenze:";
+"score.limit" = "Punktegrenze";
 "win.by.two" = "Mit zwei gewinnen";
 "number.of.players" = "Anzahl der Spieler";
 "2" = "2";
 "4" = "4";
-"serve.interval" = "Servierintervall;
+"serve.interval" = "Servierintervall";
 "5" = "5";
 "workout" = "Trainieren";
-"start.game" = "🏓 Spiel starten";
+"save" = "sparen";
 "log.out" = "Ausloggen";
 "match.setup.title" = "Spielaufbau";
 
@@ -52,7 +52,7 @@
 
 "opponent" = "Gegner";
 "final.score" = "Endstand:";
-"winnter" = "Gewinner:";
+"winner" = "Gewinner:";
 "max.heart.rate" = "Maximale Herzfrequenz";
 "match.history.detail.title" = "Spiel Detail";
 

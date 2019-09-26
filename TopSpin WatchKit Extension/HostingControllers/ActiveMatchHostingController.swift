@@ -10,35 +10,14 @@ import SwiftUI
 
 class ActiveMatchHostingController: WKHostingController<ActiveGameView> {
     
-    // MARK: - Properties
-    
-    private var workoutManager: WorkoutManager!
-    private var matchSettings: MatchSetting!
-    
-    // MARK: - Body
-    
     override var body: ActiveGameView {
-        let active = ActiveGameView(settings: matchSettings, workoutManager: workoutManager) {
-            
+        let active = ActiveGameView() {
             DispatchQueue.main.async {
-                WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "MatchSetup", context: [] as AnyObject),
-                                                                                   (name: "MatchHistory", context: [] as AnyObject)])
+                let viewNames = ["Settings", "Home", "MatchHistory"]
+                WKInterfaceController.reloadRootPageControllers(withNames: viewNames, contexts: nil, orientation: .horizontal, pageIndex: 1)
             }
         }
         
         return active
-    }
-    
-    // MARK: - Awake
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        guard let context = context as? (settings: MatchSetting, workoutManager: WorkoutManager?) else {
-            return
-        }
-        
-        workoutManager = context.workoutManager
-        matchSettings = context.settings
     }
 }

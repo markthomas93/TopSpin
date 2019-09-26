@@ -16,11 +16,11 @@ class LandingHostingController: WKHostingController<LandingView> {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-//        if UserDefaultsManager.loggedInUser != nil {
+        if UserDefaultsManager.loggedInUser != nil {
             DispatchQueue.main.async {
-                WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "MatchSetup", context: [] as AnyObject),
-                                                                                   (name: "MatchHistory", context: [] as AnyObject)])
+                let viewNames = ["Settings", "Home", "MatchHistory"]
+                WKInterfaceController.reloadRootPageControllers(withNames: viewNames, contexts: nil, orientation: .horizontal, pageIndex: 1)
             }
-//        }
+        }
     }
 }

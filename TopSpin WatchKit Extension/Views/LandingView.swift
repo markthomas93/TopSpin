@@ -39,8 +39,8 @@ struct LandingView: View {
     private func subscribeToDataManager() {
         dataManager.onDidSignUp = {
             DispatchQueue.main.async {
-                WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "MatchSetup", context: [] as AnyObject),
-                                                                                   (name: "MatchHistory", context: [] as AnyObject)])
+                let viewNames = ["Settings", "Home", "MatchHistory"]
+                WKInterfaceController.reloadRootPageControllers(withNames: viewNames, contexts: nil, orientation: .horizontal, pageIndex: 1)
             }
         }
     }

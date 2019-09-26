@@ -22,8 +22,23 @@ struct APIConstants {
     struct Match {
         static let matches = "matches"
         
-        static func userMatches(_ id: String) -> String {
-            return "\(APIConstants.User.users)/\(id)/\(APIConstants.Match.matches)"
+        static var userMatches: String {
+            let userId = UserDefaultsManager.loggedInUser!.id
+            return "\(APIConstants.User.users)/\(userId)/\(APIConstants.Match.matches)"
+        }
+    }
+    
+    struct MatchSettings {
+        static let matchSettings = "match-settings"
+        
+        static var userMatchSettings: String {
+            let userId = UserDefaultsManager.loggedInUser!.id
+            return "\(APIConstants.User.users)/\(userId)/\(APIConstants.MatchSettings.matchSettings)"
+        }
+        
+        static func updateMatch(_ id: String) -> String {
+            let userId = UserDefaultsManager.loggedInUser!.id
+            return "\(APIConstants.User.users)/\(userId)/\(APIConstants.MatchSettings.matchSettings)/\(id)"
         }
     }
 }

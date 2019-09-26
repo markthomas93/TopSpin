@@ -29,6 +29,9 @@ struct SignInWithAppleButton: WKInterfaceObjectRepresentable {
         }
         
         @objc func buttonPressed() {
+            #if DEBUG
+            parent.user = UserSignUp(name: "Will", email: "testuser0001@example.com", userCredential: "00000001")
+            #else
             let appleIDProvider = ASAuthorizationAppleIDProvider()
             let request = appleIDProvider.createRequest()
             request.requestedScopes = [.fullName, .email]
@@ -36,6 +39,7 @@ struct SignInWithAppleButton: WKInterfaceObjectRepresentable {
             let authorizationController = ASAuthorizationController(authorizationRequests: [request])
             authorizationController.delegate = self
             authorizationController.performRequests()
+            #endif
         }
 
         func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {

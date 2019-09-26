@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20681BF233AEB23003BCBC9 /* HomeHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20681BE233AEB23003BCBC9 /* HomeHostingController.swift */; };
+		D20681C7233AEBC1003BCBC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20681C6233AEBC1003BCBC9 /* HomeView.swift */; };
+		D20681C9233BC9A0003BCBC9 /* MatchSettingsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20681C8233BC9A0003BCBC9 /* MatchSettingsDataManager.swift */; };
+		D20681CB233BECE3003BCBC9 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20681CA233BECE3003BCBC9 /* HomeDataManager.swift */; };
 		D2088BE223182FA100C99619 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2088BE123182FA100C99619 /* LandingView.swift */; };
 		D2088BE72318365400C99619 /* LandingHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2088BE62318365400C99619 /* LandingHostingController.swift */; };
 		D21C80152333D71F00CC871B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29FE9572333B77400327FE3 /* Localizable.strings */; };
@@ -23,6 +27,8 @@
 		D2856FD7230C9515008D8450 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2856FD6230C9515008D8450 /* Date+Formatter.swift */; };
 		D2856FDE230CDE83008D8450 /* ActiveMatchScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2856FDD230CDE83008D8450 /* ActiveMatchScoreView.swift */; };
 		D2921AAF2315655400985631 /* WorkoutHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2921AAE2315655400985631 /* WorkoutHeartView.swift */; };
+		D2966F94233AC377005AE7C1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2966F93233AC377005AE7C1 /* SettingsView.swift */; };
+		D2966F9C233AEA51005AE7C1 /* SettingsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2966F9B233AEA51005AE7C1 /* SettingsHostingController.swift */; };
 		D29FE9552333B77400327FE3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29FE9572333B77400327FE3 /* Localizable.strings */; };
 		D29FE95A2333BAAB00327FE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29FE9592333BAAB00327FE3 /* Constants.swift */; };
 		D29FE95C2333BEA800327FE3 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29FE95B2333BEA800327FE3 /* StringConstants.swift */; };
@@ -46,7 +52,6 @@
 		D2C2C955231E059100F3CB8E /* Array+Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C2C954231E059100F3CB8E /* Array+Difference.swift */; };
 		D2DFC31D22F1C57C00FE96AB /* MatchHistoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */; };
 		D2DFC31F22F1C6E000FE96AB /* MatchSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */; };
-		D2DFC32122F1D01000FE96AB /* MatchSetupHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */; };
 		D2DFC32322F1DA1E00FE96AB /* MatchSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32222F1DA1E00FE96AB /* MatchSetting.swift */; };
 		D2DFC32C22F1F63B00FE96AB /* SignUpInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC32B22F1F63B00FE96AB /* SignUpInterfaceController.swift */; };
 		D2E1131822F083E500D4D67D /* MatchHistoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */; };
@@ -161,6 +166,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D20681BE233AEB23003BCBC9 /* HomeHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHostingController.swift; sourceTree = "<group>"; };
+		D20681C6233AEBC1003BCBC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D20681C8233BC9A0003BCBC9 /* MatchSettingsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSettingsDataManager.swift; sourceTree = "<group>"; };
+		D20681CA233BECE3003BCBC9 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		D2088BE123182FA100C99619 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		D2088BE62318365400C99619 /* LandingHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHostingController.swift; sourceTree = "<group>"; };
 		D21C80172333DA1900CC871B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -182,6 +191,8 @@
 		D2856FD6230C9515008D8450 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		D2856FDD230CDE83008D8450 /* ActiveMatchScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveMatchScoreView.swift; sourceTree = "<group>"; };
 		D2921AAE2315655400985631 /* WorkoutHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHeartView.swift; sourceTree = "<group>"; };
+		D2966F93233AC377005AE7C1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D2966F9B233AEA51005AE7C1 /* SettingsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHostingController.swift; sourceTree = "<group>"; };
 		D29FE9562333B77400327FE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D29FE9592333BAAB00327FE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D29FE95B2333BEA800327FE3 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
@@ -200,7 +211,6 @@
 		D2C2C954231E059100F3CB8E /* Array+Difference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Difference.swift"; sourceTree = "<group>"; };
 		D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchHistoryHostingController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/HostingControllers/MatchHistoryHostingController.swift"; sourceTree = "<group>"; };
 		D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetupView.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Views/MatchSetupView.swift"; sourceTree = "<group>"; };
-		D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetupHostingController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/HostingControllers/MatchSetupHostingController.swift"; sourceTree = "<group>"; };
 		D2DFC32222F1DA1E00FE96AB /* MatchSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchSetting.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/Model/MatchSetting.swift"; sourceTree = "<group>"; };
 		D2DFC32B22F1F63B00FE96AB /* SignUpInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpInterfaceController.swift; path = "../../../../../System/Volumes/Data/Users/willbrandin/TopSpin/TopSpin WatchKit Extension/InterfaceControllers/SignUpInterfaceController.swift"; sourceTree = "<group>"; };
 		D2DFC32D22F1F6CE00FE96AB /* TopSpin WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TopSpin WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -269,6 +279,8 @@
 				D2A7DC7C23185B8900150A98 /* SignUpDataManager.swift */,
 				D2A7DC8B2318701F00150A98 /* TopSpinApi.swift */,
 				D2A7DCF22318746B00150A98 /* APIConstants.swift */,
+				D20681C8233BC9A0003BCBC9 /* MatchSettingsDataManager.swift */,
+				D20681CA233BECE3003BCBC9 /* HomeDataManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -287,10 +299,11 @@
 			isa = PBXGroup;
 			children = (
 				D2DFC31C22F1C57C00FE96AB /* MatchHistoryHostingController.swift */,
-				D2DFC32022F1D01000FE96AB /* MatchSetupHostingController.swift */,
 				D2FD222322E8F6CF00D6075D /* ActiveMatchHostingController.swift */,
 				D234EE602313158900935C66 /* ActiveWorkoutHostingController.swift */,
 				D2088BE62318365400C99619 /* LandingHostingController.swift */,
+				D2966F9B233AEA51005AE7C1 /* SettingsHostingController.swift */,
+				D20681BE233AEB23003BCBC9 /* HomeHostingController.swift */,
 			);
 			path = HostingControllers;
 			sourceTree = "<group>";
@@ -309,7 +322,6 @@
 				D2FD222122E8F6CF00D6075D /* ActiveGameView.swift */,
 				D2E1131622F083C900D4D67D /* MatchHistoryView.swift */,
 				D2E1131722F083E500D4D67D /* MatchHistoryListItem.swift */,
-				D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */,
 				D2A4D1EE22FA09780032019D /* MatchDetailView.swift */,
 				D2856FDD230CDE83008D8450 /* ActiveMatchScoreView.swift */,
 				D2A23BAB230EC56700A5ABC8 /* ScoreboardView.swift */,
@@ -319,6 +331,9 @@
 				D23A429C2318B1C1008D1D61 /* LoadingView.swift */,
 				D23A429E2318B410008D1D61 /* Loader.swift */,
 				D262D91A232D793D0092E105 /* SignInWithAppleButton.swift */,
+				D2DFC31E22F1C6E000FE96AB /* MatchSetupView.swift */,
+				D2966F93233AC377005AE7C1 /* SettingsView.swift */,
+				D20681C6233AEBC1003BCBC9 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -604,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20681CB233BECE3003BCBC9 /* HomeDataManager.swift in Sources */,
 				D2DFC31F22F1C6E000FE96AB /* MatchSetupView.swift in Sources */,
 				D2A7DCF92318767C00150A98 /* BundleUtil.swift in Sources */,
 				D2FD222422E8F6CF00D6075D /* ActiveMatchHostingController.swift in Sources */,
@@ -618,15 +634,18 @@
 				D2FD222822E8F6CF00D6075D /* ComplicationController.swift in Sources */,
 				D2A7DC7B231857A200150A98 /* String+Validator.swift in Sources */,
 				D2EB07E0230C7DA400741A95 /* UserDefaultsManager.swift in Sources */,
-				D2DFC32122F1D01000FE96AB /* MatchSetupHostingController.swift in Sources */,
 				D2A7DC8C2318701F00150A98 /* TopSpinApi.swift in Sources */,
 				D2088BE72318365400C99619 /* LandingHostingController.swift in Sources */,
 				D241D0B422EB3A65001C4AC8 /* Player.swift in Sources */,
+				D20681C7233AEBC1003BCBC9 /* HomeView.swift in Sources */,
 				D29FE95E2333BED400327FE3 /* LocalizationKeys.swift in Sources */,
 				D23A429D2318B1C1008D1D61 /* LoadingView.swift in Sources */,
 				D2DFC32C22F1F63B00FE96AB /* SignUpInterfaceController.swift in Sources */,
+				D2966F94233AC377005AE7C1 /* SettingsView.swift in Sources */,
 				D29FE95A2333BAAB00327FE3 /* Constants.swift in Sources */,
+				D20681BF233AEB23003BCBC9 /* HomeHostingController.swift in Sources */,
 				D2FD222222E8F6CF00D6075D /* ActiveGameView.swift in Sources */,
+				D2966F9C233AEA51005AE7C1 /* SettingsHostingController.swift in Sources */,
 				D2088BE223182FA100C99619 /* LandingView.swift in Sources */,
 				D2FD222622E8F6CF00D6075D /* ExtensionDelegate.swift in Sources */,
 				D234EE6523131EAE00935C66 /* WorkoutSession.swift in Sources */,
@@ -641,6 +660,7 @@
 				D2DFC31D22F1C57C00FE96AB /* MatchHistoryHostingController.swift in Sources */,
 				D2A4D1EF22FA09780032019D /* MatchDetailView.swift in Sources */,
 				D2856FD7230C9515008D8450 /* Date+Formatter.swift in Sources */,
+				D20681C9233BC9A0003BCBC9 /* MatchSettingsDataManager.swift in Sources */,
 				D2A7DC7D23185B8900150A98 /* SignUpDataManager.swift in Sources */,
 				D23A429F2318B410008D1D61 /* Loader.swift in Sources */,
 				D234EE612313158900935C66 /* ActiveWorkoutHostingController.swift in Sources */,

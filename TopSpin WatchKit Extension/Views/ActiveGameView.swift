@@ -13,7 +13,7 @@ struct ActiveGameView: View {
         
     // MARK: - Bindings
     
-    @ObservedObject var workoutManager: WorkoutManager
+    @ObservedObject private var workoutManager: WorkoutManager = WorkoutManager()
     @ObservedObject private var controller: RallyMatchController
     @State private var didTapEndGame: Bool = false
 
@@ -29,9 +29,9 @@ struct ActiveGameView: View {
     
     // MARK: - Initializer
     
-    init(settings: MatchSetting, workoutManager: WorkoutManager, onEndGame: (() -> Void)?) {
+    init(onEndGame: (() -> Void)?) {
+        let settings = UserDefaultsManager.matchSettings ?? .defaultSettings
         self.controller = RallyMatchController(settings: settings)
-        self.workoutManager = workoutManager
         self.onEndGame = onEndGame
         self.startWorkout = settings.startWorkout
         
@@ -118,11 +118,9 @@ struct ActiveGameView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ActiveGameView(settings: MatchSetting(limit: 11, winByTwo: true, numberOfPlayers: 2, serveInterval: 2, startWorkout: false),
-                           workoutManager: WorkoutManager(),
-                           onEndGame: {
+            ActiveGameView() {
                 print("End")
-            })
+            }
             .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 38mm"))
         }
     }

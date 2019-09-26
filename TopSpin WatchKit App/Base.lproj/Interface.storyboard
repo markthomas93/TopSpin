@@ -16,13 +16,20 @@
         <!--ActiveMatch-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <hostingController identifier="ActiveMatch" id="3mp-fW-waa" customClass="ActiveMatchHostingController" customModule="TopSpin_Extension">
+                <hostingController identifier="ActiveMatch" id="3mp-fW-waa" customClass="ActiveMatchHostingController" customModule="TopSpin_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="16"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="fSO-QX-mJb">
+            <objects>
+                <hostingController identifier="Home" id="2R1-ap-fEl" customClass="HomeHostingController" customModule="TopSpin_Extension">
                     <connections>
-                        <segue destination="ek1-03-0oh" kind="relationship" relationship="nextPage" id="qrh-mK-HhZ"/>
+                        <segue destination="sPM-Ac-h27" kind="relationship" relationship="nextPage" id="kGd-3F-iyz"/>
                     </connections>
                 </hostingController>
             </objects>
-            <point key="canvasLocation" x="332" y="16"/>
+            <point key="canvasLocation" x="48" y="321"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="b1f-T6-Mt9">
@@ -55,23 +62,23 @@
             </objects>
             <point key="canvasLocation" x="332" y="622"/>
         </scene>
-        <!--Match Setup-->
-        <scene sceneID="obv-md-4TF">
-            <objects>
-                <hostingController identifier="MatchSetup" title="Match Setup" id="P6r-c4-HAc" customClass="MatchSetupHostingController" customModule="TopSpin_Extension">
-                    <connections>
-                        <segue destination="sPM-Ac-h27" kind="relationship" relationship="nextPage" id="JuK-i5-ckO"/>
-                    </connections>
-                </hostingController>
-            </objects>
-            <point key="canvasLocation" x="31" y="321"/>
-        </scene>
         <!--Match History-->
         <scene sceneID="tJ9-io-D1q">
             <objects>
                 <hostingController identifier="MatchHistory" title="Match History" id="sPM-Ac-h27" customClass="MatchHistoryHostingController" customModule="TopSpin_Extension"/>
             </objects>
             <point key="canvasLocation" x="332" y="321"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="5Pm-Zy-ne3">
+            <objects>
+                <hostingController identifier="Settings" id="BVT-7Q-h6f" customClass="SettingsHostingController" customModule="TopSpin_Extension">
+                    <connections>
+                        <segue destination="2R1-ap-fEl" kind="relationship" relationship="nextPage" id="m2m-ib-XAq"/>
+                    </connections>
+                </hostingController>
+            </objects>
+            <point key="canvasLocation" x="-217" y="321"/>
         </scene>
     </scenes>
 </document>

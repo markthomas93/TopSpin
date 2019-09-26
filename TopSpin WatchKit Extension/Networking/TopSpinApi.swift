@@ -18,8 +18,10 @@ struct NetworkManager {
 
 enum TopSpinApi {
     case signIn(user: UserSignUp)
-    case getMatches(id: String)
-    case putMatches(id: String, matches: [Match])
+    case getMatches
+    case putMatches(matches: [Match])
+    case getMatchSettings
+    case updateSettings(settings: MatchSetting)
 }
 
 extension TopSpinApi: EndPointType {
@@ -48,10 +50,14 @@ extension TopSpinApi: EndPointType {
         switch self {
         case .signIn:
             return APIConstants.User.users
-        case .getMatches(id: let id):
-            return APIConstants.Match.userMatches(id)
-        case .putMatches(id: let id, matches: _):
-            return APIConstants.Match.userMatches(id)
+        case .getMatches:
+            return APIConstants.Match.userMatches
+        case .putMatches:
+            return APIConstants.Match.userMatches
+        case .getMatchSettings:
+            return APIConstants.MatchSettings.userMatchSettings
+        case .updateSettings(settings: let settings):
+            return APIConstants.MatchSettings.updateMatch(settings.id!)
         }
     }
     
@@ -59,9 +65,9 @@ extension TopSpinApi: EndPointType {
         switch self {
         case .signIn:
             return .post
-        case .getMatches:
+        case .getMatches, .getMatchSettings:
             return .get
-        case .putMatches:
+        case .putMatches, .updateSettings:
             return .put
         }
     }
@@ -70,10 +76,12 @@ extension TopSpinApi: EndPointType {
         switch self {
         case .signIn(user: let newUser):
             return .requestParameters(bodyParameters: newUser, urlParameters: nil)
-        case .getMatches:
+        case .getMatches, .getMatchSettings:
             return .requestParametersAndHeaders(bodyParameters: nil, urlParameters: nil, additionalHeaders: headers)
-        case .putMatches(id: _, matches: let matches):
+        case .putMatches(matches: let matches):
             return .requestParametersAndHeaders(bodyParameters: matches, urlParameters: nil, additionalHeaders: headers)
+        case .updateSettings(settings: let settings):
+            return .requestParametersAndHeaders(bodyParameters: settings, urlParameters: nil, additionalHeaders: headers)
         }
     }
     

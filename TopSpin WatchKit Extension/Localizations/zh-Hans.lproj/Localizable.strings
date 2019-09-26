@@ -37,7 +37,7 @@
 
 // MARK: - Match Setup
 
-"score.limit" = "分数限制:";
+"score.limit" = "分数限制";
 "win.by.two" = "赢二";
 "number.of.players" = "玩家人数";
 "2" = "2";
@@ -45,7 +45,7 @@
 "serve.interval" = "服务间隔";
 "5" = "5";
 "workout" = "锻炼";
-"start.game" = "🏓 开始比赛";
+"save" = "救";
 "log.out" = "登出";
 "match.setup.title" = "比赛设定";
 
@@ -53,7 +53,7 @@
 
 "opponent" = "对手";
 "final.score" = "最终分数:";
-"winnter" = "优胜者:";
+"winner" = "优胜者:";
 "max.heart.rate" = "最大心率";
 "match.history.detail.title" = "比赛细节";
 

@@ -8,108 +8,96 @@
 import Foundation
 import SwiftUI
 
-struct MatchSetupView: View {
-    
-    @State private var scoreLimit: Double = 11
-    @State private var winByTwo: Bool = true
-    @State private var startWorkout: Bool = true
-    @State private var numberOfPlayers: Int = 2
-    @State private var serveInterval: Int = 2
-    
-    var onComplete: ((MatchSetting) -> Void)?
+struct MatchSettingsView: View {
+    @Binding var showMatchSetup: Bool
+    @ObservedObject var dataManager = MatchSettingsDataManager()
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("\(Constants.Strings.MatchSetup.scoreLimit) \(Int(scoreLimit))")
-                .font(.system(.headline, design: .rounded))
-                
-                Slider(value: $scoreLimit, in: ClosedRange(uncheckedBounds: (lower: 0, upper: 21)), step: 1)
-                .accentColor(.green)
-                .digitalCrownRotation($scoreLimit, from: 0, through: 21)
-                
-                Toggle(Constants.Strings.MatchSetup.winByTwo, isOn: $winByTwo)
-                .padding()
-                
-                Text(Constants.Strings.MatchSetup.numberOfPlayers)
-                .font(.system(.headline, design: .rounded))
-                .padding(.top)
-                
-                HStack {
-                    Button(action: {
-                        self.numberOfPlayers = 2
-                    }) {
-                        Text(Constants.Strings.MatchSetup.numberTwo)
-                    }
-                    .accentColor(numberOfPlayers == 2 ? .blue : nil)
-                    .font(.system(.body, design: .rounded))
-                    
-                    Button(action: {
-                        self.numberOfPlayers = 4
-                    }) {
-                        Text(Constants.Strings.MatchSetup.numberFour)
-                    }
-                    .accentColor(numberOfPlayers == 4 ? .blue : nil)
-                    .font(.system(.body, design: .rounded))
-                }
-                
-                Text(Constants.Strings.MatchSetup.serveInterval)
-                .font(.system(.headline, design: .rounded))
-                .padding(.top)
-                
-                HStack {
-                    Button(action: {
-                        self.serveInterval = 2
-                    }) {
-                        Text(Constants.Strings.MatchSetup.numberTwo)
-                    }
-                    .accentColor(serveInterval == 2 ? .blue : nil)
-                    .font(.system(.body, design: .rounded))
-                    
-                    Button(action: {
-                        self.serveInterval = 5
-                    }) {
-                        Text(Constants.Strings.MatchSetup.numberFive)
-                    }
-                    .font(.system(.body, design: .rounded))
-                    .accentColor(serveInterval == 5 ? .blue : nil)
-                }
-                
-                Toggle(Constants.Strings.MatchSetup.workout, isOn: $startWorkout)
-                .padding()
-                
-                Button(action: complete) {
-                    HStack {
-                        Text(Constants.Strings.MatchSetup.startGame)
-                        .font(.system(.headline, design: .rounded))
-                    }
-                }
-                .accentColor(.green)
-                .padding(.top, 10)
-                
-                Button(action: logout) {
-                    HStack {
-                        Text(Constants.Strings.MatchSetup.logOut)
-                    }
-                }
-                .padding(.top, 20)
+        let setup = MatchSetupView(matchSettings: $dataManager.settings,
+                       isLoading: $dataManager.loading,
+                       saveSettings: dataManager.setMatchSettings)
+        
+        dataManager.onComplete = {
+            self.showMatchSetup = false
+        }
+        
+        return setup
+    }
+}
+
+struct MatchSetupView: View {
+    
+    // MARK: - Binding
+    
+    @Binding var matchSettings: MatchSetting
+    @Binding var isLoading: Bool
+
+    let saveSettings: () -> Void
+    
+    // MARK: - State
+    
+    var body: some View {
+        LoadingView(isShowing: $isLoading) {
+            ScrollView {
+                self.setupView()
             }
         }
         .navigationBarTitle(Text(Constants.Strings.MatchSetup.matchSetupTitle))
     }
     
-    private func complete() {
-        let settings = MatchSetting(limit: Int(scoreLimit),
-                                    winByTwo: winByTwo,
-                                    numberOfPlayers: numberOfPlayers,
-                                    serveInterval: serveInterval,
-                                    startWorkout: startWorkout)
-        onComplete?(settings)
-    }
+    // MARK: - Private Methods
     
-    private func logout() {
-        UserDefaultsManager.clear()
-        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "LandingView", context: [] as AnyObject)])
+    private func setupView() -> some View {
+        return VStack {
+            Text(Constants.Strings.MatchSetup.scoreLimit)
+            .font(.system(.headline, design: .rounded))
+            
+            HStack {
+                ServeIntervalButton(scoreValue: 7, scoreLimit: $matchSettings.limit)
+                ServeIntervalButton(scoreValue: 11, scoreLimit: $matchSettings.limit)
+                ServeIntervalButton(scoreValue: 21, scoreLimit: $matchSettings.limit)
+            }
+            
+            HStack {
+                Text("\(Constants.Strings.MatchSetup.serveInterval):")
+                .font(.footnote)
+                Text("\(matchSettings.serveInterval)")
+                .font(.footnote)
+                .bold()
+            }
+            
+            Toggle(Constants.Strings.MatchSetup.winByTwo, isOn: $matchSettings.winByTwo)
+            .padding()
+            
+            Toggle(Constants.Strings.MatchSetup.workout, isOn: $matchSettings.startWorkout)
+            .padding()
+            
+            Button(action: saveSettings) {
+                HStack {
+                    Text(Constants.Strings.MatchSetup.save)
+                    .font(.system(.headline, design: .rounded))
+                }
+            }
+            .accentColor(.green)
+            .padding(.top, 10)
+        }
+    }
+}
+
+struct ServeIntervalButton: View {
+    
+    let scoreValue: Int
+
+    @Binding var scoreLimit: Int
+    
+    var body: some View {
+        Button(action: {
+            self.scoreLimit = self.scoreValue
+        }) {
+            Text("\(scoreValue)")
+        }
+        .accentColor(scoreLimit == scoreValue ? .blue : nil)
+        .font(.system(.body, design: .rounded))
     }
 }
 
@@ -117,11 +105,11 @@ struct MatchSetupView: View {
 struct MatchSetupView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MatchSetupView()
+            MatchSettingsView(showMatchSetup: .constant(true))
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 44mm"))
                 .environment(\.locale, Locale(identifier: "zh-Hans"))
 
-            MatchSetupView()
+            MatchSettingsView(showMatchSetup: .constant(true))
                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 40mm"))
                 .environment(\.locale, Locale(identifier: "zh-Hans"))
         }

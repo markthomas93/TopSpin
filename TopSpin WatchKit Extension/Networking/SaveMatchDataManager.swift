@@ -14,6 +14,6 @@ class SaveMatchDataManager: ObservableObject {
         savedMatches.append(match)
         
         UserDefaultsManager.matchHistory = savedMatches
-        print("SaveMatchDataManager: - \(match.id) saved")
+        print("SaveMatchDataManager: - \(match.id ?? "0") saved")
     }
 }

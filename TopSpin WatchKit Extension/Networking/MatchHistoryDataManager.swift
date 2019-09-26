@@ -20,13 +20,8 @@ class MatchHistoryWebService: ObservableObject {
     
     // 1. Fetch History from API
     private func requestMatchHistory() {
-        guard let id = UserDefaultsManager.loggedInUser?.id else {
-            handleHistory(.failure(.requestFailed))
-            return
-        }
-        
         isLoading = true
-        NetworkManager.sharedInstance.requestWithListResponse(for: .getMatches(id: id), [Match].self) { [weak self] (result) in
+        NetworkManager.sharedInstance.requestWithListResponse(for: .getMatches, [Match].self) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.isLoading = false
                 self?.handleHistory(result)
@@ -55,13 +50,8 @@ class MatchHistoryWebService: ObservableObject {
     }
     
     private func uploadDifference(_ matches: [Match]) {
-        guard let id = UserDefaultsManager.loggedInUser?.id else {
-            handleUpload(.failure(.requestFailed))
-            return
-        }
-        
         isLoading = true
-        NetworkManager.sharedInstance.requestWithListResponse(for: .putMatches(id: id, matches: matches), [Match].self) { [weak self] (result) in
+        NetworkManager.sharedInstance.requestWithListResponse(for: .putMatches(matches: matches), [Match].self) { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.isLoading = false
                 self?.handleUpload(result)

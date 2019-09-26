@@ -48,7 +48,7 @@ struct LocalizationKeys {
         static let number5 = "5"
         static let serveInterval = "serve.interval"
         static let workout = "workout"
-        static let startGame = "start.game"
+        static let save = "save"
         static let logOut = "log.out"
         static let scoreLimit = "score.limit"
         static let title = "match.setup.title"

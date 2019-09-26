@@ -23,6 +23,7 @@ class WorkoutManager: NSObject, ObservableObject {
     private var activeDataQueries = [HKQuery]()
     private var workoutSession: HKWorkoutSession?
     private var maxHeartRate: Double = 0.0
+    private var totalEnergyBurned = HKQuantity(unit: .kilocalorie(), doubleValue: 0)
     private let countPerMinute = HKUnit(from: "count/min")
 
     // Bindable props
@@ -118,12 +119,14 @@ class WorkoutManager: NSObject, ObservableObject {
         
         // What data we want to write
         let writeTypes: Set<HKSampleType> = [.workoutType(),
-                                             HKSampleType.quantityType(forIdentifier: .heartRate)!]
+                                             HKSampleType.quantityType(forIdentifier: .heartRate)!,
+                                             HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!]
         
         // What data we want to
         let readTypes: Set<HKObjectType> = [.activitySummaryType(),
                                             .workoutType(),
-                                            HKObjectType.quantityType(forIdentifier: .heartRate)!]
+                                            HKObjectType.quantityType(forIdentifier: .heartRate)!,
+                                            HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!]
         
         healthStore = HKHealthStore()
         healthStore?.requestAuthorization(toShare: writeTypes, read: readTypes) { [weak self] success, error in
@@ -169,6 +172,7 @@ class WorkoutManager: NSObject, ObservableObject {
     
     private func startQueries() {
         startQuery(quantityTypeIdentifier: .heartRate)
+        startQuery(quantityTypeIdentifier: .activeEnergyBurned)
     }
     
     private func process(_ samples: [HKQuantitySample], type: HKQuantityTypeIdentifier) {
@@ -182,6 +186,11 @@ class WorkoutManager: NSObject, ObservableObject {
                 maxHeartRate = latestHeartRate > maxHeartRate ? latestHeartRate : maxHeartRate
                 print("Last Heart Rate: \(latestHeartRate)")
                 
+            case .activeEnergyBurned:
+                let newEnergy = sample.quantity.doubleValue(for: .kilocalorie())
+                let currentEnergy = totalEnergyBurned.doubleValue(for: .kilocalorie())
+                totalEnergyBurned = HKQuantity(unit: .kilocalorie(), doubleValue: newEnergy + currentEnergy)
+                print("Energy: \(totalEnergyBurned)")
             default:
                 break
             }

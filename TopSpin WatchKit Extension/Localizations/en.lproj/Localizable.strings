@@ -36,7 +36,7 @@
 
 // MARK: - Match Setup
 
-"score.limit" = "Score Limit:";
+"score.limit" = "Score Limit";
 "win.by.two" = "Win by Two";
 "number.of.players" = "Number of Players";
 "2" = "2";
@@ -44,7 +44,7 @@
 "serve.interval" = "Serve Interval";
 "5" = "5";
 "workout" = "Workout";
-"start.game" = "🏓 Start Game";
+"save" = "Save";
 "log.out" = "Log Out";
 "match.setup.title" = "Match Setup";
 
@@ -52,7 +52,7 @@
 
 "opponent" = "Opponent";
 "final.score" = "Final Score:";
-"winnter" = "Winner:";
+"winner" = "Winner:";
 "max.heart.rate" = "Max Heart Rate";
 "match.history.detail.title" = "Match Detail";
 
